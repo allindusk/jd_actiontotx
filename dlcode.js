@@ -3,7 +3,7 @@ let request = require('request')
 let fs = require('fs')
 
 let urlarr = [
-  //通知
+  //jd通知
   'https://github.com/lxk0301/jd_scripts/raw/master/sendNotify.js',
   //京东直播  "30 16-18 * * *" "10-20/5 12 * * *"
   'https://github.com/lxk0301/jd_scripts/raw/master/jd_live.js',
