@@ -1,0 +1,30 @@
+component: scf
+name: yangmao_jd
+app: yangmao_jd
+stage: dev
+inputs:
+  name: yangmao_jd
+  src: ./
+  description: yangmao_script
+  handler: index.main_handler
+  runtime: Nodejs12.16
+  namespace: default
+  region: ap-hongkong 
+  memorySize: 64
+  timeout: 333
+  # environment:
+  #   variables:
+  #     QD_TEXT: 天天签到，天天开心
+  events:
+    - timer:
+        parameters:
+          name: 京东直播
+          cronExpression: "0 0 0-16/8,20 * * * *"
+          enable: true
+          argument: jd_script\jd_live.js
+    - timer:
+        parameters:
+          name: 京东汽车兑换
+          cronExpression: "0 0 0 * * * *"
+          enable: true
+          argument: jd_script\jd_car_exchange.js
