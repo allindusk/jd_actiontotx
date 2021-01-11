@@ -5,8 +5,6 @@ let fs = require('fs')
 let urlarr = [
   //jd通知
   'https://github.com/lxk0301/jd_scripts/raw/master/sendNotify.js',
-  //京东直播  "30 16-18 * * *" "10-20/5 12 * * *"
-  'https://github.com/lxk0301/jd_scripts/raw/master/jd_live.js',
   //京东汽车兑换  "0 0 * * *"
   'https://github.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js',
 ]
