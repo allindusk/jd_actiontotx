@@ -7,6 +7,8 @@ let urlarr = [
   'https://github.com/lxk0301/jd_scripts/raw/master/sendNotify.js',
   //jdCookie
   'https://github.com/lxk0301/jd_scripts/raw/master/jdCookie.js',
+  //云端UA
+  'https://github.com/lxk0301/jd_scripts/raw/master/USER_AGENTS.js',
   //京东汽车兑换  "0 0 * * *"
   'https://github.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js',
 ]
