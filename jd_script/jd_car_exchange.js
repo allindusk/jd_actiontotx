@@ -90,6 +90,7 @@ function showMsg() {
 function exchange() {
   return new Promise(resolve => {
     $.post(taskUrl('v1/user/exchange/bean'), (err, resp, data) => {
+      console.log(`${JSON.stringify(data)}`)
       try {
         if (err) {
           data = JSON.parse(resp.body)
