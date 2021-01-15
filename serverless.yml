@@ -1,9 +1,9 @@
 component: scf
-name: yangmao_jd
-app: yangmao_jd
+name: yangmao_Jd
+app: yangmao_Jd
 stage: dev
 inputs:
-  name: yangmao_jd
+  name: yangmao_Jd
   src: ./
   description: yangmao_script
   handler: index.main_handler
