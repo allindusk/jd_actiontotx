@@ -22,3 +22,9 @@ inputs:
           cronExpression: "0 0 0 * * * *"
           enable: true
           argument: jd_script/jd_car_exchange.js
+    - timer:
+        parameters:
+          name: jd_live_redrain
+          cronExpression: "0 30,31 20-23 * * * *"
+          enable: true
+          argument: jd_script/jd_live_redrain.js

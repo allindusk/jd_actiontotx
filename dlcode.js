@@ -11,6 +11,8 @@ let urlarr = [
   'https://gitee.com/lxk0301/jd_scripts/raw/master/USER_AGENTS.js',
   //京东汽车兑换  "0 0 * * *"
   'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js',
+  //超级直播间红包雨  "30,31 20-23/1 15 1 *"
+  'https://github.com/shylocks/Loon/raw/main/jd_live_redrain.js',
 ]
 
 for (const urlstr of urlarr) {
