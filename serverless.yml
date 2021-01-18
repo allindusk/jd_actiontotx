@@ -19,12 +19,18 @@ inputs:
     - timer:
         parameters:
           name: jd_car_exchange
-          cronExpression: "0 0 0 * * * *"
+          cronExpression: "10 0,2 0 * * * *"
           enable: true
           argument: jd_script/jd_car_exchange.js
     - timer:
         parameters:
-          name: jd_live_redrain
+          name: jd_live_redrain2
           cronExpression: "0 30,31 20-23 * * * *"
           enable: true
-          argument: jd_script/jd_live_redrain.js
+          argument: jd_script/jd_live_redrain2.js
+    - timer:
+        parameters:
+          name: jd_nianCollect
+          cronExpression: "0 33 * * * * *"
+          enable: true
+          argument: jd_script/jd_nianCollect.js
