@@ -21,7 +21,7 @@ inputs:
           name: jd_car_exchange
           cronExpression: "10 0,2 0 * * * *"
           enable: true
-          argument: jd_script/jd_car_exchange.js
+          argument: jd_script/jd_car_exchange.js&jd_script/jd_blueCoin.js
     - timer:
         parameters:
           name: jd_live_redrain2

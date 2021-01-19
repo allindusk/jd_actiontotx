@@ -13,6 +13,8 @@ let urlarr = [
   'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js',
   //超级直播间红包雨  "30,31 20-23/1 15 1 *"
   'https://github.com/shylocks/Loon/raw/main/jd_live_redrain2.js',
+  //京小超领蓝币  "0 0 0 * * *"
+  'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_blueCoin.js',
   //炸年兽专门收集爆竹  "20 * * * *"
   'https://github.com/LXK9301/jd_scripts/raw/master/jd_nianCollect.js',
 ]
