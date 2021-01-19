@@ -18,14 +18,14 @@ inputs:
   events:
     - timer:
         parameters:
-          name: jd_car_exchange
-          cronExpression: "10 0,2 0 * * * *"
+          name: jd_car_exchange_blueCoin
+          cronExpression: "0 0,2 0 * * * *"	
           enable: true
-          argument: jd_script/jd_car_exchange.js&jd_script/jd_blueCoin.js
+          argument: jd_script/jd_blueCoin.js&jd_script/jd_car_exchange.js
     - timer:
         parameters:
           name: jd_live_redrain2
-          cronExpression: "0 30,31 20-23 * * * *"
+          cronExpression: "0 0,1 19-21 * * * *"
           enable: true
           argument: jd_script/jd_live_redrain2.js
     - timer:

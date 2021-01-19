@@ -1,0 +1,21 @@
+name: 执行脚本
+on:
+  workflow_dispatch:
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: "安装依赖"
+        run: |
+          npm install
+      - name: "运行脚本"
+        run: |
+          node $CODE_NAME
+        env:
+          CODE_NAME: ${{ secrets.CODE_NAME}}
