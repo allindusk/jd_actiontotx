@@ -19,7 +19,9 @@ jobs:
           npm install
           sudo npm install serverless -g
       - name: "运行下载代码脚本"
-        run: node dlcode.js
+        run: |
+          node dlcode.js
+          du -h --max-depth=1
       # - name: commit-push code
       #   run: |
       #     git config user.name github-actions

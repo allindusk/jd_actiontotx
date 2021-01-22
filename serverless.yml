@@ -14,7 +14,7 @@ inputs:
   timeout: 333
   environment:
     variables:
-      RUN_CONFIG: '{"run":"true"},"jd_bean_sign":{"run":"true"}}'
+      RUN_CONFIG: '{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}'
   events:
     - timer:
         parameters:
