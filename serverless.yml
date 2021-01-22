@@ -21,16 +21,40 @@ inputs:
           name: jd_car_exchange_blueCoin
           cronExpression: "0 0,2 0 * * * *"	
           enable: true
-          argument: jd_script/jd_blueCoin.js&jd_script/jd_car_exchange.js
+          argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
     - timer:
         parameters:
           name: jd_live_redrain2
           cronExpression: "0 0,1 19-21 * * * *"
           enable: true
-          argument: jd_script/jd_live_redrain2.js
+          argument: async_jd?jd_live_redrain2.js
+    - timer:
+        parameters:
+          name: jd_live_redrain_half
+          cronExpression: "0 30,31 12-23 * * * *"
+          enable: true
+          argument: async_jd?jd_live_redrain_half.js
+    - timer:
+        parameters:
+          name: jd_live_redrain_nian
+          cronExpression: "0 0 0,9,11,13,15,17,19,20,21,23 3,5,20-30 1,2 * *"
+          enable: true
+          argument: async_jd?jd_live_redrain_nian.js
+    - timer:
+        parameters:
+          name: jd_live_redrain_offical
+          cronExpression: "0 0 0,9,11,13,15,17,19,20,21,22,23 * * * *"
+          enable: true
+          argument: async_jd?jd_live_redrain_offical.js
+    - timer:
+        parameters:
+          name: jd_live
+          cronExpression: "0 10,15,20 12 * * * *"
+          enable: true
+          argument: async_jd?jd_live.js
     - timer:
         parameters:
           name: jd_nianCollect
           cronExpression: "0 33 * * * * *"
           enable: true
-          argument: jd_script/jd_nianCollect.js
+          argument: async_jd?jd_nianCollect.js
