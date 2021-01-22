@@ -1,11 +1,11 @@
 component: scf
-name: yangmao_jb
-app: yangmao_jb
+name: yangmaojb
+app: yangmaojb
 stage: dev
 inputs:
-  name: yangmao_jb
+  name: yangmaojb
   src: ./
-  description: yangmao_script
+  description: yangmaojb
   handler: index.main_handler
   runtime: Nodejs12.16
   namespace: default
@@ -14,7 +14,7 @@ inputs:
   timeout: 333
   environment:
     variables:
-      QD_TEXT: 天天签到，天天开心
+      RUN_CONFIG: '{"run":"true"},"jd_bean_sign":{"run":"true"}}'
   events:
     - timer:
         parameters:
