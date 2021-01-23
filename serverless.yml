@@ -1,7 +1,6 @@
 component: scf
 name: yangmaojb
 app: yangmaojb
-stage: dev
 inputs:
   name: yangmaojb
   src: ./
@@ -11,7 +10,7 @@ inputs:
   namespace: default
   region: ap-hongkong 
   memorySize: 64
-  timeout: 333
+  timeout: 900
   environment:
     variables:
       RUN_CONFIG: '{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}'

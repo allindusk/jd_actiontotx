@@ -13,7 +13,7 @@
 let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 //{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}
 
-let scriptobj_shell = {
+let scriptobj_noasync = {
 //==============限时=================
   jd_nianCollect:{//炸年兽专门收集爆竹  50 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nianCollect.js',
@@ -381,24 +381,23 @@ let scriptobj_env = {
   },
 }
 
-let scriptobj = Object.assign({},scriptobj_shell,scriptobj_async,scriptobj_env)
-// console.log(scriptobj)
+let scriptobj = Object.assign({},scriptobj_noasync,scriptobj_async,scriptobj_env)
+// console.log(getnoasyncstr())
 
-function getshellstr(){
-  let shellstr = ''
+function getnoasyncstr(){
+  let scriptstr = ''
   const date = new Date();
   let hour = date.getHours().toString();
   let minute = date.getMinutes().toString();
   hour = hour.length<2?`0${hour}`:hour
   minute = minute.length<2?`0${minute}`:minute
-  for (const key in scriptobj_shell) {
-    let cron = scriptobj_shell[key]['cron']
-    let shellcode = scriptobj_shell[key]['shellcode']
-    if(cron.m.includes(minute)&&cron.h.includes(hour)&&scriptobj_shell[key]['run']=='true'){
-      shellstr+=shellcode
+  for (const sname in scriptobj_noasync) {
+    let cron = scriptobj_noasync[sname]['cron']
+    if(cron.m.includes(minute)&&cron.h.includes(hour)&&scriptobj_noasync[sname]['run']=='true'){
+      scriptstr+=`${sname}.js&&`
     }
   }
-  return shellstr.substr(0,shellstr.length-2)
+  return scriptstr.substr(0,scriptstr.length-2)
 }
 
 function geturlarr(){
@@ -410,6 +409,6 @@ function geturlarr(){
 }
 
 module.exports = {
-  getshellstr,
+  getnoasyncarr: getnoasyncstr,
   geturlarr,
 }
