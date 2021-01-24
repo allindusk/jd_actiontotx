@@ -63,9 +63,3 @@ inputs:
           cronExpression: "0 13,43 * * * * *"
           enable: false
           argument: noasync_jd
-    - timer:
-        parameters:
-          name: jd_nianCollect
-          cronExpression: "0 33 * * * * *"
-          enable: false
-          argument: async_jd?jd_nianCollect.js

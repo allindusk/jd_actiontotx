@@ -12,6 +12,7 @@ exports.main_handler = async (event, context) => {
     }else if(runtype=='noasync_jd'){
       scripstr = require('./config.js').getnoasyncarr()
     }
+    console.log('本次运行汇总',scripstr)
     for (const scriptname of scripstr.split("&&")) {
       const scriptPath = script_folderpath+scriptname
       console.log(`${new Date().toTimeString().substr(0,17)}===运行${scriptPath}`);

@@ -8,7 +8,6 @@
 
 // let cronconfig = process.env.CRON_CONFIG?JSON.parse(process.env.CRON_CONFIG):""
 //{"scripts1":{"cron":{"m":"13","h":"02"}},"scripts2":{"cron":{"m":"13","h":"02"}}}
-//cronconfig['scripts1']?cronconfig['scripts1']['cron']:
 
 let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 //{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}
@@ -29,13 +28,13 @@ let scriptobj_noasync = {
   },
   jd_immortal:{//京东神仙书院  20 8 * * * 
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
-    cron:{m:'13',h:'07,21'},
+    cron:{m:'13',h:'07'},
     run:runconfig['jd_immortal']?runconfig['jd_immortal']['run']:'true',
     shellcode:'node jd_immortal.js&&'
   },
   jd_nh:{//京东年货节  1 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nh.js',
-    cron:{m:'13',h:'06,22'},
+    cron:{m:'13',h:'06'},
     run:runconfig['jd_nh']?runconfig['jd_nh']['run']:'true',
     shellcode:'node jd_nh.js&&'
   },
@@ -47,38 +46,38 @@ let scriptobj_noasync = {
   },
   jd_nian_ar:{//京东炸年兽AR  0 9 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nian_ar.js',
-    cron:{m:'13',h:'21,23'},
+    cron:{m:'13',h:'21'},
     run:runconfig['jd_nian_ar']?runconfig['jd_nian_ar']['run']:'true',
     shellcode:'node jd_nian_ar.js&&'
   },
   jd_nian_sign:{//京东炸年兽签到任务  30 8 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nian_sign.js',
-    cron:{m:'13',h:'20,22'},
+    cron:{m:'13',h:'20'},
     run:runconfig['jd_nian_sign']?runconfig['jd_nian_sign']['run']:'true',
     shellcode:'node jd_nian_sign.js&&'
   },
   jd_nian_wechat:{//京东炸年兽小程序  50 8 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nian_wechat.js',
-    cron:{m:'43',h:'20,22'},
+    cron:{m:'43',h:'20'},
     run:runconfig['jd_nian_wechat']?runconfig['jd_nian_wechat']['run']:'true',
     shellcode:'node jd_nian_wechat.js&&'
   },
   jd_xg:{//小鸽有礼  5 7 * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_xg.js',
-    cron:{m:'43',h:'06,22'},
+    cron:{m:'43',h:'06'},
     run:runconfig['jd_xg']?runconfig['jd_xg']['run']:'true',
     shellcode:'node jd_xg.js&&'
   },
 //==============常驻=================
   jd_gyec:{//工业品爱消除  20 * * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_gyec.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_gyec']?runconfig['jd_gyec']['run']:'true',
     shellcode:'node jd_gyec.js&&'
   },
   jd_mh:{//盲盒抽京豆  1 7 * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_mh.js',
-    cron:{m:'13',h:'06,19'},
+    cron:{m:'13',h:'05,19'},
     run:runconfig['jd_mh']?runconfig['jd_mh']['run']:'true',
     shellcode:'node jd_mh.js&&'
   },
@@ -90,13 +89,13 @@ let scriptobj_noasync = {
   },
   jd_xxl_gh:{//个护爱消除  40 * * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_xxl_gh.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_xxl_gh']?runconfig['jd_xxl_gh']['run']:'true',
     shellcode:'node jd_xxl_gh.js&&'
   },
   jd_ms:{//京东秒秒币  10 7 * * * 
     url:'https://github.com/shylocks/Loon/raw/main/jd_ms.js',
-    cron:{m:'13',h:'06,19'},
+    cron:{m:'43',h:'05,19'},
     run:runconfig['jd_ms']?runconfig['jd_ms']['run']:'true',
     shellcode:'node jd_ms.js&&'
   },
@@ -114,25 +113,25 @@ let scriptobj_noasync = {
   },
   jd_bookshop:{//口袋书店  1 8,12,18 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_bookshop.js',
-    cron:{m:'13',h:'01,06,11,22'},
+    cron:{m:'13',h:'01,05,11,22'},
     run:runconfig['jd_bookshop']?runconfig['jd_bookshop']['run']:'true',
     shellcode:'node jd_bookshop.js&&'
   },
   jd_car:{//京东汽车  10 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_car.js',
-    cron:{m:'13',h:'09,21'},
+    cron:{m:'13',h:'09,19'},
     run:runconfig['jd_car']?runconfig['jd_car']['run']:'true',
     shellcode:'node jd_car.js&&'
   },
   jd_cash:{//签到领现金  2 0 * * * 
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_cash.js',
-    cron:{m:'13',h:'00,21'},
+    cron:{m:'13',h:'01'},
     run:runconfig['jd_cash']?runconfig['jd_cash']['run']:'true',
     shellcode:'node jd_cash.js&&'
   },
   jd_club_lottery:{//摇京豆  5 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_club_lottery.js',
-    cron:{m:'13',h:'00,22'},
+    cron:{m:'13',h:'01'},
     run:runconfig['jd_club_lottery']?runconfig['jd_club_lottery']['run']:'true',
     shellcode:'node jd_club_lottery.js&&'
   },
@@ -150,13 +149,13 @@ let scriptobj_noasync = {
   },
   jd_dreamFactory:{//京东京喜工厂  10 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_dreamFactory.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_dreamFactory']?runconfig['jd_dreamFactory']['run']:'true',
     shellcode:'node jd_dreamFactory.js&&'
   },
   jd_family:{//京东家庭号  1 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_family.js',
-    cron:{m:'43',h:'00,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_family']?runconfig['jd_family']['run']:'true',
     shellcode:'node jd_family.js&&'
   },
@@ -168,7 +167,7 @@ let scriptobj_noasync = {
   },
   jd_jdfactory:{//东东工厂  10 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_jdfactory.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_jdfactory']?runconfig['jd_jdfactory']['run']:'true',
     shellcode:'node jd_jdfactory.js&&'
   },
@@ -180,7 +179,7 @@ let scriptobj_noasync = {
   },
   jd_joy:{//jd宠汪汪  15 0-23/2 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_joy.js',
-    cron:{m:'13',h:'00,02,04,06,08,10,12,14,16,18,20,22'},
+    cron:{m:'13',h:'02,08,10,12,14,16,18,20'},
     run:runconfig['jd_joy']?runconfig['jd_joy']['run']:'true',
     shellcode:'node jd_joy.js&&'
   },
@@ -210,13 +209,13 @@ let scriptobj_noasync = {
   },
   jd_moneyTree:{//京东摇钱树  3 0-23/2 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_moneyTree.js',
-    cron:{m:'43',h:'00,02,04,06,08,10,12,14,16,18,20,22'},
+    cron:{m:'43',h:'00,02,04,06,08,10,12,14,16,18,21,22'},
     run:runconfig['jd_moneyTree']?runconfig['jd_moneyTree']['run']:'true',
     shellcode:'node jd_moneyTree.js&&'
   },
   jd_necklace:{//点点券  10 0,20 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_necklace.js',
-    cron:{m:'13',h:'00,20'},
+    cron:{m:'43',h:'01,19'},
     run:runconfig['jd_necklace']?runconfig['jd_necklace']['run']:'true',
     shellcode:'node jd_necklace.js&&'
   },
@@ -234,31 +233,31 @@ let scriptobj_noasync = {
   },
   jd_plantBean:{//种豆得豆  1 7-21/2 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_plantBean.js',
-    cron:{m:'13',h:'07,09,11,13,15,17,19,21'},
+    cron:{m:'13',h:'08,09,11,13,15,17,19,21'},
     run:runconfig['jd_plantBean']?runconfig['jd_plantBean']['run']:'true',
     shellcode:'node jd_plantBean.js&&'
   },
   jd_redPacket:{//京东全民开红包  1 1 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_redPacket.js',
-    cron:{m:'43',h:'00,19'},
+    cron:{m:'43',h:'01,19'},
     run:runconfig['jd_redPacket']?runconfig['jd_redPacket']['run']:'true',
     shellcode:'node jd_redPacket.js&&'
   },
   jd_shop:{//进店领豆  10 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_shop.js',
-    cron:{m:'13',h:'00,20'},
+    cron:{m:'43',h:'10,20'},
     run:runconfig['jd_shop']?runconfig['jd_shop']['run']:'true',
     shellcode:'node jd_shop.js&&'
   },
   jd_small_home:{//东东小窝  16 22 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_small_home.js',
-    cron:{m:'13',h:'22,23'},
+    cron:{m:'43',h:'03'},
     run:runconfig['jd_small_home']?runconfig['jd_small_home']['run']:'true',
     shellcode:'node jd_small_home.js&&'
   },
   jd_speed:{//京东天天加速  8 0-23/3 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_speed.js',
-    cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
+    cron:{m:'13',h:'02,03,06,09,12,15,18,21'},
     run:runconfig['jd_speed']?runconfig['jd_speed']['run']:'true',
     shellcode:'node jd_speed.js&&'
   },
@@ -270,13 +269,13 @@ let scriptobj_noasync = {
   },
   jd_syj:{//十元街  10 7 * * * 
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_syj.js',
-    cron:{m:'13',h:'07,22'},
+    cron:{m:'13',h:'08,22'},
     run:runconfig['jd_syj']?runconfig['jd_syj']['run']:'true',
     shellcode:'node jd_syj.js&&'
   },
   jd_unsubscribe:{//取关京东店铺和商品  55 23 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_unsubscribe.js',
-    cron:{m:'43',h:'23'},
+    cron:{m:'43',h:'03'},
     run:runconfig['jd_unsubscribe']?runconfig['jd_unsubscribe']['run']:'true',
     shellcode:'node jd_unsubscribe.js&&'
   },
@@ -288,7 +287,7 @@ let scriptobj_noasync = {
   },
   jd_bean_sign:{//每日签到 0 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_bean_sign.js',
-    cron:{m:'13',h:'00'},
+    cron:{m:'13',h:'00,23'},
     run:runconfig['jd_bean_sign']?runconfig['jd_bean_sign']['run']:'true',
     shellcode:'node jd_bean_sign.js&&'
   },
@@ -300,9 +299,15 @@ let scriptobj_noasync = {
   },
   jd_lotteryMachine:{//京东抽奖机   17 23 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_lotteryMachine.js',
-    cron:{m:'13',h:'23'},
+    cron:{m:'13',h:'17'},
     run:runconfig['jd_lotteryMachine']?runconfig['jd_lotteryMachine']['run']:'true',
     shellcode:'node jd_lotteryMachine.js&&'
+  },
+  jd_petTreasureBox:{//聚宝盆投狗粮辅助  0 9,12,18 * * *
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_petTreasureBox.js',
+    cron:{m:'43',h:'09,13,18'},
+    run:runconfig['jd_petTreasureBox']?runconfig['jd_petTreasureBox']['run']:'true',
+    shellcode:'node jd_petTreasureBox.js&&'
   },
 }
 let scriptobj_async = {
@@ -340,9 +345,6 @@ let scriptobj_async = {
   },
   jd_joy_run:{//宠汪汪邀请助力与赛跑助力脚本  token时效很短，几个小时就失效了,闲麻烦的放弃就行
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_joy_run.js',
-  },
-  jd_petTreasureBox:{//聚宝盆投狗粮辅助  0 9,12,18 * * *
-    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_petTreasureBox.js',
   },
   jd_unbind:{//注销京东会员卡  55 23 * * 6
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_unbind.js',
@@ -382,8 +384,24 @@ let scriptobj_env = {
 }
 
 let scriptobj = Object.assign({},scriptobj_noasync,scriptobj_async,scriptobj_env)
-// console.log(getnoasyncstr())
-
+// console.log()
+allnoasyncstr()
+function allnoasyncstr(){
+  for (let index = 0; index < 24; index++) {
+    ['13','43'].forEach(minute => {
+      const tmpi = index.toString()
+      let scriptstr = '',snum = 0,hour = tmpi.length<2?'0'+tmpi:tmpi
+      for (const sname in scriptobj_noasync) {
+        let cron = scriptobj_noasync[sname]['cron']
+        if(cron.m.includes(minute)&&cron.h.includes(hour)&&scriptobj_noasync[sname]['run']=='true'){
+          scriptstr+=sname+'|'
+          snum++
+        }
+      }
+      console.log(`${hour}:${minute}共${snum}个`,scriptstr)
+    });
+  }
+}
 function getnoasyncstr(){
   let scriptstr = ''
   const date = new Date();
@@ -399,7 +417,6 @@ function getnoasyncstr(){
   }
   return scriptstr.substr(0,scriptstr.length-2)
 }
-
 function geturlarr(){
   let urlarr = []
   for (const key in scriptobj) {
@@ -409,6 +426,6 @@ function geturlarr(){
 }
 
 module.exports = {
-  getnoasyncarr: getnoasyncstr,
+  getnoasyncstr,
   geturlarr,
 }
