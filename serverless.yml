@@ -13,7 +13,7 @@ inputs:
   timeout: 900
   environment:
     variables:
-      RUN_CONFIG: '{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}'
+      RUN_CONFIG: '{"jd_petTreasureBox":{"run":"false"}}'
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'

@@ -68,6 +68,12 @@ let scriptobj_noasync = {
     shellcode:'node jd_xg.js&&'
   },
 //==============常驻=================
+  jd_sgmh:{//闪购盲盒  20 8 * * *
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_sgmh.js',
+    cron:{m:'43',h:'16'},
+    run:runconfig['jd_sgmh']?runconfig['jd_sgmh']['run']:'true',
+    shellcode:'node jd_sgmh.js&&'
+  },
   jd_gyec:{//工业品爱消除  20 * * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_gyec.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
@@ -427,5 +433,6 @@ function geturlarr(){
 
 module.exports = {
   getnoasyncstr,
+  allnoasyncstr,
   geturlarr,
 }
