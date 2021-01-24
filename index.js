@@ -15,7 +15,9 @@ exports.main_handler = async (event, context) => {
     console.log('本次运行汇总',scripstr)
     for (const scriptname of scripstr.split("&&")) {
       const scriptPath = script_folderpath+scriptname
-      console.log(`${new Date().toTimeString().substr(0,17)}===运行${scriptPath}`);
+      const date = new Date();
+      date.setHours(date.getHours() + 8)
+      console.log(`${date.toTimeString().substr(0,17)}===运行${scriptPath}`);
       if (runtype=='async_jd') {
         async_run(scriptPath)
       }else if(runtype=='noasync_jd'){
@@ -57,5 +59,7 @@ function noasync_run(modulePath){
   })
 }
 function runendlog(runendstr,modulePath,code){
-  console.log(`${runendstr}\n${new Date().toTimeString().substr(0,17)}===子进程:${modulePath}使用代码${code}关闭所有stdio`);
+  const date = new Date();
+  date.setHours(date.getHours() + 8)
+  console.log(`${runendstr}\n${date.toTimeString().substr(0,17)}===子进程:${modulePath}使用代码${code}关闭所有stdio`);
 }

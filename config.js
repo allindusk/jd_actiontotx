@@ -404,6 +404,7 @@ function allnoasyncstr(){
 function getnoasyncstr(){
   let scriptstr = ''
   const date = new Date();
+  date.setHours(date.getHours() + 8)
   let hour = date.getHours().toString();
   let minute = date.getMinutes().toString();
   hour = hour.length<2?`0${hour}`:hour
