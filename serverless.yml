@@ -59,7 +59,13 @@ inputs:
           argument: async_jd?jd_live.js
     - timer:
         parameters:
+          name: noasync
+          cronExpression: "0 13,43 * * * * *"
+          enable: false
+          argument: noasync_jd
+    - timer:
+        parameters:
           name: jd_nianCollect
           cronExpression: "0 33 * * * * *"
-          enable: true
+          enable: false
           argument: async_jd?jd_nianCollect.js
