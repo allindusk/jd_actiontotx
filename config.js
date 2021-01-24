@@ -1,4 +1,3 @@
-'use strict';
 /**
 - 仓库列表
   - https://github.com/LXK9301/jd_scripts
@@ -385,7 +384,7 @@ let scriptobj_env = {
 
 let scriptobj = Object.assign({},scriptobj_noasync,scriptobj_async,scriptobj_env)
 // console.log()
-allnoasyncstr()
+// allnoasyncstr()
 function allnoasyncstr(){
   for (let index = 0; index < 24; index++) {
     ['13','43'].forEach(minute => {

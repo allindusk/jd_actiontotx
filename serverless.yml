@@ -61,5 +61,5 @@ inputs:
         parameters:
           name: noasync
           cronExpression: "0 13,43 * * * * *"
-          enable: false
+          enable: true
           argument: noasync_jd
