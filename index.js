@@ -10,7 +10,7 @@ exports.main_handler = async (event, context) => {
     if (runtype=='async_jd') {
       scripstr = mesarr[1]
     }else if(runtype=='noasync_jd'){
-      scripstr = require('./config.js').getnoasyncarr()
+      scripstr = require('./config.js').getnoasyncstr()
     }
     console.log('本次运行汇总',scripstr)
     for (const scriptname of scripstr.split("&&")) {
