@@ -27,19 +27,19 @@ let scriptobj_noasync = {
   },
   jd_immortal:{//京东神仙书院  20 8 * * * 
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
-    cron:{m:'13',h:'07'},
+    cron:{m:'13',h:'19'},
     run:runconfig['jd_immortal']?runconfig['jd_immortal']['run']:'true',
     shellcode:'node jd_immortal.js&&'
   },
   jd_nh:{//京东年货节  1 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nh.js',
-    cron:{m:'13',h:'06'},
+    cron:{m:'43',h:'20'},
     run:runconfig['jd_nh']?runconfig['jd_nh']['run']:'true',
     shellcode:'node jd_nh.js&&'
   },
   jd_nian:{//京东炸年兽  10 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nian.js',
-    cron:{m:'43',h:'08,20'},
+    cron:{m:'43',h:'21,22'},
     run:runconfig['jd_nian']?runconfig['jd_nian']['run']:'true',
     shellcode:'node jd_nian.js&&'
   },
@@ -63,7 +63,7 @@ let scriptobj_noasync = {
   },
   jd_xg:{//小鸽有礼  5 7 * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_xg.js',
-    cron:{m:'43',h:'06'},
+    cron:{m:'43',h:'20'},
     run:runconfig['jd_xg']?runconfig['jd_xg']['run']:'true',
     shellcode:'node jd_xg.js&&'
   },
@@ -82,7 +82,7 @@ let scriptobj_noasync = {
   },
   jd_mh:{//盲盒抽京豆  1 7 * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_mh.js',
-    cron:{m:'13',h:'05,19'},
+    cron:{m:'13',h:'19'},
     run:runconfig['jd_mh']?runconfig['jd_mh']['run']:'true',
     shellcode:'node jd_mh.js&&'
   },
@@ -100,7 +100,7 @@ let scriptobj_noasync = {
   },
   jd_ms:{//京东秒秒币  10 7 * * * 
     url:'https://github.com/shylocks/Loon/raw/main/jd_ms.js',
-    cron:{m:'43',h:'05,19'},
+    cron:{m:'43',h:'19'},
     run:runconfig['jd_ms']?runconfig['jd_ms']['run']:'true',
     shellcode:'node jd_ms.js&&'
   },
@@ -112,7 +112,7 @@ let scriptobj_noasync = {
   },
   jd_bean_home:{//领京豆额外奖励  10 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_bean_home.js',
-    cron:{m:'13',h:'07,20'},
+    cron:{m:'13',h:'07'},
     run:runconfig['jd_bean_home']?runconfig['jd_bean_home']['run']:'true',
     shellcode:'node jd_bean_home.js&&'
   },
@@ -124,7 +124,7 @@ let scriptobj_noasync = {
   },
   jd_car:{//京东汽车  10 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_car.js',
-    cron:{m:'13',h:'09,19'},
+    cron:{m:'13',h:'09'},
     run:runconfig['jd_car']?runconfig['jd_car']['run']:'true',
     shellcode:'node jd_car.js&&'
   },
@@ -142,7 +142,7 @@ let scriptobj_noasync = {
   },
   jd_crazy_joy:{//crazyJoy任务  10 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_crazy_joy.js',
-    cron:{m:'13',h:'07,23'},
+    cron:{m:'13',h:'07'},
     run:runconfig['jd_crazy_joy']?runconfig['jd_crazy_joy']['run']:'true',
     shellcode:'node jd_crazy_joy.js&&'
   },
@@ -178,7 +178,7 @@ let scriptobj_noasync = {
   },
   jd_jdzz:{//京东赚赚  10 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_jdzz.js',
-    cron:{m:'43',h:'00,22'},
+    cron:{m:'43',h:'22'},
     run:runconfig['jd_jdzz']?runconfig['jd_jdzz']['run']:'true',
     shellcode:'node jd_jdzz.js&&'
   },
@@ -208,7 +208,7 @@ let scriptobj_noasync = {
   },
   jd_kd:{//京东快递签到  10 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_kd.js',
-    cron:{m:'43',h:'00,17'},
+    cron:{m:'43',h:'17'},
     run:runconfig['jd_kd']?runconfig['jd_kd']['run']:'true',
     shellcode:'node jd_kd.js&&'
   },
@@ -244,13 +244,13 @@ let scriptobj_noasync = {
   },
   jd_redPacket:{//京东全民开红包  1 1 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_redPacket.js',
-    cron:{m:'43',h:'01,19'},
+    cron:{m:'43',h:'01'},
     run:runconfig['jd_redPacket']?runconfig['jd_redPacket']['run']:'true',
     shellcode:'node jd_redPacket.js&&'
   },
   jd_shop:{//进店领豆  10 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_shop.js',
-    cron:{m:'43',h:'10,20'},
+    cron:{m:'43',h:'10'},
     run:runconfig['jd_shop']?runconfig['jd_shop']['run']:'true',
     shellcode:'node jd_shop.js&&'
   },
@@ -274,7 +274,7 @@ let scriptobj_noasync = {
   },
   jd_syj:{//十元街  10 7 * * * 
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_syj.js',
-    cron:{m:'13',h:'08,22'},
+    cron:{m:'13',h:'08'},
     run:runconfig['jd_syj']?runconfig['jd_syj']['run']:'true',
     shellcode:'node jd_syj.js&&'
   },
@@ -286,13 +286,13 @@ let scriptobj_noasync = {
   },
   jx_sign:{//京喜签到  5 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jx_sign.js',
-    cron:{m:'13',h:'00,23'},
+    cron:{m:'13',h:'00'},
     run:runconfig['jx_sign']?runconfig['jx_sign']['run']:'true',
     shellcode:'node jx_sign.js&&'
   },
-  jd_bean_sign:{//每日签到 0 0 * * *
+  jd_bean_sign:{//京东每日签到 0 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_bean_sign.js',
-    cron:{m:'13',h:'00,23'},
+    cron:{m:'13',h:'00'},
     run:runconfig['jd_bean_sign']?runconfig['jd_bean_sign']['run']:'true',
     shellcode:'node jd_bean_sign.js&&'
   },
