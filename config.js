@@ -25,12 +25,6 @@ let scriptobj_noasync = {
     run:runconfig['jd_firecrackers']?runconfig['jd_firecrackers']['run']:'true',
     shellcode:'node jd_firecrackers.js&&'
   },
-  jd_immortal:{//京东神仙书院  20 8 * * * 
-    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
-    cron:{m:'13',h:'19'},
-    run:runconfig['jd_immortal']?runconfig['jd_immortal']['run']:'true',
-    shellcode:'node jd_immortal.js&&'
-  },
   jd_nh:{//京东年货节  1 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nh.js',
     cron:{m:'43',h:'20'},
@@ -163,12 +157,6 @@ let scriptobj_noasync = {
     cron:{m:'43',h:'00,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_family']?runconfig['jd_family']['run']:'true',
     shellcode:'node jd_family.js&&'
-  },
-  jd_fruit:{//东东农场  5 6-18/6 * * * 
-    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_fruit.js',
-    cron:{m:'13',h:'07,13,20'},
-    run:runconfig['jd_fruit']?runconfig['jd_fruit']['run']:'true',
-    shellcode:'node jd_fruit.js&&'
   },
   jd_jdfactory:{//东东工厂  10 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_jdfactory.js',
@@ -314,6 +302,12 @@ let scriptobj_noasync = {
     run:runconfig['jd_petTreasureBox']?runconfig['jd_petTreasureBox']['run']:'true',
     shellcode:'node jd_petTreasureBox.js&&'
   },
+  jd_fruit:{//东东农场  5 6-18/6 * * * 
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_fruit.js',
+    cron:{m:'13',h:'07,13,20'},
+    run:runconfig['jd_fruit']?runconfig['jd_fruit']['run']:'true',
+    shellcode:'node jd_fruit.js&&'
+  },
 }
 let scriptobj_async = {
 //==============限时=================
@@ -328,6 +322,9 @@ let scriptobj_async = {
   },
   jd_live_redrain_offical:{//官方号直播红包雨  0 0,9,11,13,15,17,19,20,21,22,23 * * *
     url:'https://github.com/shylocks/Loon/raw/main/jd_live_redrain_offical.js',
+  },
+  jd_immortal:{//京东神仙书院  20 8 * * *   运行时间太久单独触发
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
   },
 //==============常驻=================
   jd_live:{//京东直播，每日18豆  10-20/5 12 * * *

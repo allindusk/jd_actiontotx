@@ -59,6 +59,12 @@ inputs:
           argument: async_jd?jd_live.js
     - timer:
         parameters:
+          name: jd_immortal
+          cronExpression: "0 0 20 * * * *"
+          enable: true
+          argument: async_jd?jd_immortal.js
+    - timer:
+        parameters:
           name: noasync
           cronExpression: "0 13,43 * * * * *"
           enable: true
