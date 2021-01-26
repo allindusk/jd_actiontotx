@@ -190,7 +190,7 @@ let scriptobj_noasync = {
   },
   jd_jxnc:{//京喜农场  0 9,12,18 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_jxnc.js',
-    cron:{m:'43',h:'06,07,22'},
+    cron:{m:'43',h:'06,22'},
     run:runconfig['jd_jxnc']?runconfig['jd_jxnc']['run']:'true',
     shellcode:'node jd_jxnc.js&&'
   },
