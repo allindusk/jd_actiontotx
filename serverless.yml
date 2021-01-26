@@ -9,7 +9,7 @@ inputs:
   runtime: Nodejs12.16
   namespace: default
   region: ap-hongkong 
-  memorySize: 64
+  memorySize: 128
   timeout: 900
   environment:
     variables:
@@ -59,8 +59,14 @@ inputs:
           argument: async_jd?jd_live.js
     - timer:
         parameters:
+          name: jd_lotteryMachine
+          cronExpression: "0 0 20,22 * * * *"
+          enable: true
+          argument: async_jd?jd_lotteryMachine.js
+    - timer:
+        parameters:
           name: jd_immortal
-          cronExpression: "0 0 20 * * * *"
+          cronExpression: "0 0 21 * * * *"
           enable: true
           argument: async_jd?jd_immortal.js
     - timer:

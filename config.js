@@ -146,7 +146,7 @@ let scriptobj_noasync = {
     run:runconfig['jd_daily_egg']?runconfig['jd_daily_egg']['run']:'true',
     shellcode:'node jd_daily_egg.js&&'
   },
-  jd_dreamFactory:{//京东京喜工厂  10 * * * *
+  jd_dreamFactory:{//京东京喜工厂  10 * * * * 黑了
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_dreamFactory.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_dreamFactory']?runconfig['jd_dreamFactory']['run']:'true',
@@ -166,7 +166,7 @@ let scriptobj_noasync = {
   },
   jd_jdzz:{//京东赚赚  10 0 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_jdzz.js',
-    cron:{m:'43',h:'22'},
+    cron:{m:'43',h:'19'},
     run:runconfig['jd_jdzz']?runconfig['jd_jdzz']['run']:'true',
     shellcode:'node jd_jdzz.js&&'
   },
@@ -290,13 +290,7 @@ let scriptobj_noasync = {
     run:runconfig['jd_rankingList']?runconfig['jd_rankingList']['run']:'true',
     shellcode:'node jd_rankingList.js&&'
   },
-  jd_lotteryMachine:{//京东抽奖机   17 23 * * *
-    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_lotteryMachine.js',
-    cron:{m:'13',h:'17'},
-    run:runconfig['jd_lotteryMachine']?runconfig['jd_lotteryMachine']['run']:'true',
-    shellcode:'node jd_lotteryMachine.js&&'
-  },
-  jd_petTreasureBox:{//聚宝盆投狗粮辅助  0 9,12,18 * * *
+  jd_petTreasureBox:{//聚宝盆投狗粮辅助  0 9,12,18 * * *  弱智代码
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_petTreasureBox.js',
     cron:{m:'43',h:'09,13,18'},
     run:runconfig['jd_petTreasureBox']?runconfig['jd_petTreasureBox']['run']:'true',
@@ -327,6 +321,9 @@ let scriptobj_async = {
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
   },
 //==============常驻=================
+  jd_lotteryMachine:{//京东抽奖机   17 23 * * * 超时
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_lotteryMachine.js',
+  },
   jd_live:{//京东直播，每日18豆  10-20/5 12 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_live.js',
   },
