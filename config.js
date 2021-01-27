@@ -3,6 +3,7 @@
   - https://github.com/LXK9301/jd_scripts
   - https://github.com/shylocks/Loon
   - https://gitee.com/lxk0301/jd_scripts
+  - https://github.com/allindusk/jingdong_ym/raw/shy/jd_gyec.js
  */
 
 // let cronconfig = process.env.CRON_CONFIG?JSON.parse(process.env.CRON_CONFIG):""
@@ -27,13 +28,13 @@ let scriptobj_noasync = {
   },
   jd_nh:{//京东年货节  1 7 * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nh.js',
-    cron:{m:'43',h:'20'},
+    cron:{m:'43',h:'19'},
     run:runconfig['jd_nh']?runconfig['jd_nh']['run']:'true',
     shellcode:'node jd_nh.js&&'
   },
   jd_nian:{//京东炸年兽  10 * * * *
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_nian.js',
-    cron:{m:'43',h:'21,22'},
+    cron:{m:'13',h:'19,22'},
     run:runconfig['jd_nian']?runconfig['jd_nian']['run']:'true',
     shellcode:'node jd_nian.js&&'
   },
@@ -56,7 +57,7 @@ let scriptobj_noasync = {
     shellcode:'node jd_nian_wechat.js&&'
   },
   jd_xg:{//小鸽有礼  5 7 * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_xg.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_xg.js',
     cron:{m:'43',h:'20'},
     run:runconfig['jd_xg']?runconfig['jd_xg']['run']:'true',
     shellcode:'node jd_xg.js&&'
@@ -69,31 +70,31 @@ let scriptobj_noasync = {
     shellcode:'node jd_sgmh.js&&'
   },
   jd_gyec:{//工业品爱消除  20 * * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_gyec.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_gyec.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_gyec']?runconfig['jd_gyec']['run']:'true',
     shellcode:'node jd_gyec.js&&'
   },
   jd_mh:{//盲盒抽京豆  1 7 * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_mh.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_mh.js',
     cron:{m:'13',h:'19'},
     run:runconfig['jd_mh']?runconfig['jd_mh']['run']:'true',
     shellcode:'node jd_mh.js&&'
   },
   jd_xxl:{//东东爱消除  0 * * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_xxl.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_xxl.js',
     cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
     run:runconfig['jd_xxl']?runconfig['jd_xxl']['run']:'true',
     shellcode:'node jd_xxl.js&&'
   },
   jd_xxl_gh:{//个护爱消除  40 * * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_xxl_gh.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_xxl_gh.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_xxl_gh']?runconfig['jd_xxl_gh']['run']:'true',
     shellcode:'node jd_xxl_gh.js&&'
   },
   jd_ms:{//京东秒秒币  10 7 * * * 
-    url:'https://github.com/shylocks/Loon/raw/main/jd_ms.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_ms.js',
     cron:{m:'43',h:'19'},
     run:runconfig['jd_ms']?runconfig['jd_ms']['run']:'true',
     shellcode:'node jd_ms.js&&'
@@ -306,16 +307,16 @@ let scriptobj_noasync = {
 let scriptobj_async = {
 //==============限时=================
   jd_live_redrain2:{//超级直播间红包雨  0,1 19-21/1 * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_live_redrain2.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_live_redrain2.js',
   },
   jd_live_redrain_half:{//半点红包雨  30,31 12-23/1 * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_live_redrain_half.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_live_redrain_half.js',
   },
   jd_live_redrain_nian:{//年货直播红包雨  0 0,9,11,13,15,17,19,20,21,23 3,5,20-30/1 1,2 *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_live_redrain_nian.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_live_redrain_nian.js',
   },
   jd_live_redrain_offical:{//官方号直播红包雨  0 0,9,11,13,15,17,19,20,21,22,23 * * *
-    url:'https://github.com/shylocks/Loon/raw/main/jd_live_redrain_offical.js',
+    url:'https://github.com/allindusk/jingdong_ym/raw/main/jd_live_redrain_offical.js',
   },
   jd_immortal:{//京东神仙书院  20 8 * * *   运行时间太久单独触发
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
