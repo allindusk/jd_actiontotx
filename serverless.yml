@@ -59,16 +59,16 @@ inputs:
           argument: async_jd?jd_live.js
     - timer:
         parameters:
-          name: jd_lotteryMachine
-          cronExpression: "0 0 20,22 * * * *"
-          enable: true
-          argument: async_jd?jd_lotteryMachine.js
-    - timer:
-        parameters:
           name: jd_immortal
-          cronExpression: "0 0 21 * * * *"
+          cronExpression: "0 0 19 * * * *"
           enable: true
           argument: async_jd?jd_immortal.js
+    - timer:
+        parameters:
+          name: jd_joy_reward
+          cronExpression: "0 0 0,8,12 * * * *"
+          enable: true
+          argument: async_jd?jd_joy_reward.js
     - timer:
         parameters:
           name: noasync

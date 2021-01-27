@@ -321,6 +321,9 @@ let scriptobj_async = {
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_immortal.js',
   },
 //==============常驻=================
+  jd_joy_reward:{//宠汪汪积分兑换   0 0-16/8 * * *
+    url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_joy_reward.js',
+  },
   jd_lotteryMachine:{//京东抽奖机   17 23 * * * 超时
     url:'https://github.com/LXK9301/jd_scripts/raw/master/jd_lotteryMachine.js',
   },
