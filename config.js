@@ -93,7 +93,7 @@ let scriptobj_noasync = {
   jd_paopao:{//京东泡泡大战  2 0 * * *
     url:'https://github.com/allindusk/jd_xmly/raw/main/jd_paopao.js',
     cron:{m:'43',h:'17'},
-    run:runconfig['jd_paopao']?runconfig['jd_paopao']['run']:'true',
+    run:runconfig['jd_paopao']?runconfig['jd_paopao']['run']:'false',
     shellcode:'node jd_paopao.js&&'
   },
   jd_gyec:{//工业品爱消除  20 * * * *
