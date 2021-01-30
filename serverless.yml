@@ -23,10 +23,16 @@ inputs:
   events:
     - timer:
         parameters:
+          name: jd_5g
+          cronExpression: "0 0 0,6,12,18 * * * *"	
+          enable: true
+          argument: async_jd?jd_5g
+    - timer:
+        parameters:
           name: jd_car_exchange_blueCoin
           cronExpression: "0 0,2 0 * * * *"	
           enable: true
-          argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
+          argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js&&jd_coupon
     - timer:
         parameters:
           name: jd_live_redrain2
