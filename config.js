@@ -58,6 +58,12 @@ let scriptobj_noasync = {
     run:runconfig['jd_xg']?runconfig['jd_xg']['run']:'true',
     shellcode:'node jd_xg.js&&'
   },
+  jd_xgyl:{//小鸽有礼2  30 7 * * *
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js',
+    cron:{m:'43',h:'19'},
+    run:runconfig['jd_xgyl']?runconfig['jd_xgyl']['run']:'true',
+    shellcode:'node jd_xgyl.js&&'
+  },
   jd_festival:{//京东手机年终奖  15 0 * * * 2021年1月26日～2021年2月8日
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_festival.js',
     cron:{m:'13',h:'10'},
@@ -350,6 +356,9 @@ let scriptobj_async = {
   },
   jd_5g:{//5G狂欢城  0 0,6,12,18 * * * 2021-1-30至2021-2-4
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_5g.js',
+  },
+  jd_818:{//京东手机狂欢城  0 0-18/6 * * *
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_818.js',
   },
   jd_immortal:{//京东神仙书院  20 8 * * *   运行时间太久单独触发
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal.js',
