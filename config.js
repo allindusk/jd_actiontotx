@@ -31,7 +31,7 @@ let scriptobj_noasync = {
   jd_nian_ar:{//京东炸年兽AR  0 9 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/activity/jd_nian_ar.js',
     cron:{m:'13',h:'21'},
-    run:runconfig['jd_nian_ar']?runconfig['jd_nian_ar']['run']:'false',
+    run:runconfig['jd_nian_ar']?runconfig['jd_nian_ar']['run']:'true',
     shellcode:'node jd_nian_ar.js&&'
   },
   jd_nian_sign:{//京东炸年兽签到任务  30 8 * * *
