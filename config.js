@@ -15,13 +15,7 @@ let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 //{"jd_bean_change":{"run":"true"},"jd_bean_sign":{"run":"true"}}
 
 let scriptobj_noasync = {
-//==============限时=================
-  jd_nianCollect:{//炸年兽专门收集爆竹  50 * * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nianCollect.js',
-    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_nianCollect']?runconfig['jd_nianCollect']['run']:'true',
-    shellcode:'node jd_nianCollect.js&&'
-  },
+//======限时=================
   jd_nh:{//京东年货节  1 7 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nh.js',
     cron:{m:'43',h:'19'},
@@ -35,19 +29,19 @@ let scriptobj_noasync = {
     shellcode:'node jd_nian.js&&'
   },
   jd_nian_ar:{//京东炸年兽AR  0 9 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nian_ar.js',
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/activity/jd_nian_ar.js',
     cron:{m:'13',h:'21'},
-    run:runconfig['jd_nian_ar']?runconfig['jd_nian_ar']['run']:'true',
+    run:runconfig['jd_nian_ar']?runconfig['jd_nian_ar']['run']:'false',
     shellcode:'node jd_nian_ar.js&&'
   },
   jd_nian_sign:{//京东炸年兽签到任务  30 8 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nian_sign.js',
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/activity/jd_nian_sign.js',
     cron:{m:'13',h:'20'},
     run:runconfig['jd_nian_sign']?runconfig['jd_nian_sign']['run']:'true',
     shellcode:'node jd_nian_sign.js&&'
   },
   jd_nian_wechat:{//京东炸年兽小程序  50 8 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_nian_wechat.js',
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/activity/jd_nian_wechat.js',
     cron:{m:'43',h:'20'},
     run:runconfig['jd_nian_wechat']?runconfig['jd_nian_wechat']['run']:'true',
     shellcode:'node jd_nian_wechat.js&&'
@@ -70,14 +64,7 @@ let scriptobj_noasync = {
     run:runconfig['jd_festival']?runconfig['jd_festival']['run']:'true',
     shellcode:'node jd_festival.js&&'
   },
-//==============已过期=================
-  jd_firecrackers:{//集鞭炮赢京豆  10 8,21 * * *  
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_firecrackers.js',
-    cron:{m:'13',h:'15,22'},
-    run:runconfig['jd_firecrackers']?runconfig['jd_firecrackers']['run']:'false',
-    shellcode:'node jd_firecrackers.js&&'
-  },
-//==============常驻=================
+//======常驻=================
   jd_sgmh:{//闪购盲盒  20 8 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_sgmh.js',
     cron:{m:'43',h:'16'},
@@ -161,12 +148,6 @@ let scriptobj_noasync = {
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
     run:runconfig['jd_dreamFactory']?runconfig['jd_dreamFactory']['run']:'true',
     shellcode:'node jd_dreamFactory.js&&'
-  },
-  jd_family:{//京东家庭号  1 * * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_family.js',
-    cron:{m:'43',h:'00,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
-    run:runconfig['jd_family']?runconfig['jd_family']['run']:'true',
-    shellcode:'node jd_family.js&&'
   },
   jd_jdfactory:{//东东工厂  10 * * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_jdfactory.js',
@@ -306,39 +287,9 @@ let scriptobj_noasync = {
     run:runconfig['jd_fruit']?runconfig['jd_fruit']['run']:'true',
     shellcode:'node jd_fruit.js&&'
   },
-  jd_petTreasureBox:{//聚宝盆投狗粮辅助  0 9,12,18 * * *  弱智代码
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_petTreasureBox.js',
-    cron:{m:'43',h:'09,13,18'},
-    run:runconfig['jd_petTreasureBox']?runconfig['jd_petTreasureBox']['run']:'false',
-    shellcode:'node jd_petTreasureBox.js&&'
-  },
-  jd_paopao:{//京东泡泡大战  2 0 * * *
-    url:'https://github.com/allindusk/jd_xmly/raw/main/jd_paopao.js',
-    cron:{m:'43',h:'17'},
-    run:runconfig['jd_paopao']?runconfig['jd_paopao']['run']:'false',
-    shellcode:'node jd_paopao.js&&'
-  },
-  jd_gyec:{//工业品爱消除  20 * * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/shy/jd_gyec.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
-    run:runconfig['jd_gyec']?runconfig['jd_gyec']['run']:'false',
-    shellcode:'node jd_gyec.js&&'
-  },
-  jd_xxl:{//东东爱消除  0 * * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/shy/jd_xxl.js',
-    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_xxl']?runconfig['jd_xxl']['run']:'false',
-    shellcode:'node jd_xxl.js&&'
-  },
-  jd_xxl_gh:{//个护爱消除  40 * * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/shy/jd_xxl_gh.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
-    run:runconfig['jd_xxl_gh']?runconfig['jd_xxl_gh']['run']:'false',
-    shellcode:'node jd_xxl_gh.js&&'
-  },
 }
 let scriptobj_async = {
-//==============限时=================
+//======限时=================
   jd_live_redrain2:{//超级直播间红包雨  0,1 19-21/1 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/shy/jd_live_redrain2.js',
   },
@@ -351,19 +302,7 @@ let scriptobj_async = {
   jd_live_redrain_offical:{//官方号直播红包雨  0 0,9,11,13,15,17,19,20,21,22,23 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/shy/jd_live_redrain_offical.js',
   },
-  jd_coupon:{//源头好物红包  0 0 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_coupon.js',
-  },
-  jd_5g:{//5G狂欢城  0 0,6,12,18 * * * 2021-1-30至2021-2-4
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_5g.js',
-  },
-  jd_818:{//京东手机狂欢城  0 0-18/6 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_818.js',
-  },
-  jd_immortal:{//京东神仙书院  20 8 * * *   运行时间太久单独触发
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_immortal.js',
-  },
-//==============常驻=================
+//======常驻=================
   jd_joy_reward:{//宠汪汪积分兑换   0 0-16/8 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js',
   },
