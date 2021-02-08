@@ -17,7 +17,6 @@ inputs:
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
-      JD_IMMORTAL_LATLON: '{"lat":22.8,"lng":108.2}'
       JXNCTOKENS: '{"farm_jstoken":"9a26c3d5fdd1668d91900f473141c32c","timestamp":"1610441576034","phoneid":"bdc03a4fc9be38b2-35355204688244"}'
       JD_WECHAT_USER_AGENT: 'Mozilla/5.0 (Linux; Android 10; COL-AL10 Build/HUAWEICOL-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045230 Mobile Safari/537.36'
   events:
@@ -27,30 +26,6 @@ inputs:
           cronExpression: "0 0,2 0 * * * *"	
           enable: true
           argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
-    - timer:
-        parameters:
-          name: jd_live_redrain2
-          cronExpression: "0 0,1 19-21 * * * *"
-          enable: true
-          argument: async_jd?jd_live_redrain2.js
-    - timer:
-        parameters:
-          name: jd_live_redrain_half
-          cronExpression: "0 30,31 12-23 * * * *"
-          enable: true
-          argument: async_jd?jd_live_redrain_half.js
-    - timer:
-        parameters:
-          name: jd_live_redrain_nian
-          cronExpression: "0 0 0,9-23 3,5,20-30 1,2 * *"
-          enable: true
-          argument: async_jd?jd_live_redrain_nian.js
-    - timer:
-        parameters:
-          name: jd_live_redrain_offical
-          cronExpression: "0 0 0,9-17/2,19-23 * * * *"
-          enable: true
-          argument: async_jd?jd_live_redrain_offical.js
     - timer:
         parameters:
           name: jd_live
