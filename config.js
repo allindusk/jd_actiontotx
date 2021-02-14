@@ -86,7 +86,7 @@ let scriptobj_noasync = {
   jd_cash:{//签到领现金  2 0 * * * 
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_cash.js',
     cron:{m:'13',h:'01'},
-    run:runconfig['jd_cash']?runconfig['jd_cash']['run']:'true',
+    run:runconfig['jd_cash']?runconfig['jd_cash']['run']:'false',
     shellcode:'node jd_cash.js&&'
   },
   jd_club_lottery:{//摇京豆  5 0 * * *
