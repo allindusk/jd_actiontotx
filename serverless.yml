@@ -35,7 +35,7 @@ inputs:
     - timer:
         parameters:
           name: jd_cash
-          cronExpression: "0 21 0-18 * * * *"
+          cronExpression: "0 21 * * * * *"
           enable: true
           argument: async_jd?jd_cash.js
     - timer:
