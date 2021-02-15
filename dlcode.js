@@ -8,7 +8,7 @@ dlcodefile(urlarr)
 
 function dlcodefile(urlarr){
   for (const urlstr of urlarr) {
-    let scriptname = (/raw\/.*\/(.*\.js)/).exec(urlstr)[1]
+    let scriptname = (/raw\/.*\/(.*\.js)/).exec(urlstr)[1],filepath
     console.log(urlstr)
     request.get({
         url: urlstr,
@@ -17,7 +17,12 @@ function dlcodefile(urlarr){
         if(err){
           console.log(err)
         }else if(resp.statusCode==200){
-          fs.writeFile(`${__dirname}/script/${scriptname}`,String(body), error =>{
+          if(scriptname.includes('jdShareCodes')){
+            filepath = `${__dirname}/script/utils/${scriptname}`
+          }else{
+            filepath = `${__dirname}/script/${scriptname}`
+          }
+          fs.writeFile(filepath,String(body), error =>{
             if (error) {console.log(`写入失败:${error}`)
             }else {console.log(`写入成功:${scriptname}`)}
           })

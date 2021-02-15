@@ -318,6 +318,9 @@ let scriptobj_env = {
   jdPlantBeanShareCodes:{//京东种豆得豆互助码
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jdPlantBeanShareCodes.js'
   },
+  jdShareCodes:{//从日志中获取互助码
+    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/utils/jdShareCodes.js'
+  },
 }
 
 let scriptobj = Object.assign({},scriptobj_noasync,scriptobj_async,scriptobj_env)
