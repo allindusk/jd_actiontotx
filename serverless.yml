@@ -13,7 +13,7 @@ inputs:
   timeout: 900
   environment:
     variables:
-      RUN_CONFIG: '{"jd_cash":{"run":"false"}}'
+      RUN_CONFIG: '{"jd_cash":{"run":"true"}}'
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
@@ -23,27 +23,15 @@ inputs:
     - timer:
         parameters:
           name: jd_car_exchange_blueCoin_cash
-          cronExpression: "58 59 23 * * * *"
+          cronExpression: "59 59 23 * * * *"
           enable: true
           argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
     - timer:
         parameters:
           name: jd_car_exchange_blueCoin_cash2
-          cronExpression: "58 0 0 * * * *"
+          cronExpression: "59 1 0 * * * *"
           enable: true
           argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
-    - timer:
-        parameters:
-          name: jd_cash
-          cronExpression: "0 21 * * * * *"
-          enable: true
-          argument: async_jd?jd_cash.js
-    - timer:
-        parameters:
-          name: jd_live
-          cronExpression: "0 10,15,20 12 * * * *"
-          enable: true
-          argument: async_jd?jd_live.js
     - timer:
         parameters:
           name: noasync

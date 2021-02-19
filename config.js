@@ -16,12 +16,6 @@ let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 
 let scriptobj_noasync = {
 //======限时=================
-  jd_xg:{//小鸽有礼  5 7 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xg.js',
-    cron:{m:'43',h:'20'},
-    run:runconfig['jd_xg']?runconfig['jd_xg']['run']:'true',
-    shellcode:'node jd_xg.js&&'
-  },
   jd_xgyl:{//小鸽有礼2  30 7 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_xgyl.js',
     cron:{m:'43',h:'19'},
@@ -85,8 +79,8 @@ let scriptobj_noasync = {
   },
   jd_cash:{//签到领现金  2 0 * * * 
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_cash.js',
-    cron:{m:'13',h:'01'},
-    run:runconfig['jd_cash']?runconfig['jd_cash']['run']:'false',
+    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_cash']?runconfig['jd_cash']['run']:'true',
     shellcode:'node jd_cash.js&&'
   },
   jd_club_lottery:{//摇京豆  5 0 * * *
@@ -127,7 +121,7 @@ let scriptobj_noasync = {
   },
   jd_joy:{//jd宠汪汪  15 0-23/2 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy.js',
-    cron:{m:'13',h:'02,08,10,12,14,16,18,20'},
+    cron:{m:'13',h:'00,02,04,06,08,10,12,14,16,18,20,22'},
     run:runconfig['jd_joy']?runconfig['jd_joy']['run']:'true',
     shellcode:'node jd_joy.js&&'
   },
@@ -137,15 +131,15 @@ let scriptobj_noasync = {
     run:runconfig['jd_joy_feedPets']?runconfig['jd_joy_feedPets']['run']:'true',
     shellcode:'node jd_joy_feedPets.js&&'
   },
-  jd_joy_steal:{//宠汪汪偷好友积分与狗粮  0 0-10/2 * * *
+  jd_joy_steal:{//宠汪汪偷好友积分与狗粮  10 0-21/3 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_joy_steal.js',
-    cron:{m:'43',h:'00,02,04,06,08,10,21'},
+    cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
     run:runconfig['jd_joy_steal']?runconfig['jd_joy_steal']['run']:'true',
     shellcode:'node jd_joy_steal.js&&'
   },
   jd_jxnc:{//京喜农场  0 9,12,18 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_jxnc.js',
-    cron:{m:'43',h:'06,22'},
+    cron:{m:'43',h:'00,20'},
     run:runconfig['jd_jxnc']?runconfig['jd_jxnc']['run']:'true',
     shellcode:'node jd_jxnc.js&&'
   },
@@ -205,7 +199,7 @@ let scriptobj_noasync = {
   },
   jd_speed:{//京东天天加速  8 0-23/3 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_speed.js',
-    cron:{m:'13',h:'02,03,06,09,12,15,18,21'},
+    cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
     run:runconfig['jd_speed']?runconfig['jd_speed']['run']:'true',
     shellcode:'node jd_speed.js&&'
   },
@@ -241,7 +235,7 @@ let scriptobj_noasync = {
   },
   jd_rankingList:{//京东排行榜  19 16 * * *
     url:'https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_rankingList.js',
-    cron:{m:'13',h:'16'},
+    cron:{m:'13',h:'09'},
     run:runconfig['jd_rankingList']?runconfig['jd_rankingList']['run']:'true',
     shellcode:'node jd_rankingList.js&&'
   },
@@ -261,9 +255,6 @@ let scriptobj_async = {
   },
   jd_lotteryMachine:{//京东抽奖机   17 23 * * * 超时
     url:'https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_lotteryMachine.js',
-  },
-  jd_live:{//京东直播，每日18豆  10-20/5 12 * * *
-    url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_live.js',
   },
   jd_car_exchange:{//京东汽车兑换       0 0 * * *
     url:'https://gitee.com/lxk0301/jd_scripts/raw/master/jd_car_exchange.js',
