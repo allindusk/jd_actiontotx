@@ -34,6 +34,12 @@ inputs:
           argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
     - timer:
         parameters:
+          name: jd_joy_reward
+          cronExpression: "59 59 7,11,15,23 * * * *"
+          enable: true
+          argument: async_jd?jd_joy_reward.js
+    - timer:
+        parameters:
           name: noasync
           cronExpression: "0 13,43 * * * * *"
           enable: true
