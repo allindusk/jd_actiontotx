@@ -353,7 +353,7 @@ function getnoasyncstr(){
   }
   return scriptstr.substr(0,scriptstr.length-2)
 }
-console.log(geturlarr())
+// console.log(geturlarr())
 function geturlarr(){
   let urlarr = []
   for (const key in scriptobj) {
