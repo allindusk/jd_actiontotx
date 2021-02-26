@@ -46,6 +46,18 @@ inputs:
           argument: async_jd?joy_reward.js
     - timer:
         parameters:
+          name: jd_joy
+          cronExpression: "0 1 * * * * *"
+          enable: true
+          argument: async_jd?jd_joy_feedPets.js&&jd_joy_steal.js
+    - timer:
+        parameters:
+          name: jd_nzmh
+          cronExpression: "0 0 8 1-8/1,27,28 2,3 * *"
+          enable: true
+          argument: async_jd?jd_nzmh.js
+    - timer:
+        parameters:
           name: noasync
           cronExpression: "0 13,43 * * * * *"
           enable: true

@@ -30,6 +30,18 @@ let scriptobj_noasync = {
     run:runconfig['jd_sgmh']?runconfig['jd_sgmh']['run']:'true',
     shellcode:'node jd_sgmh.js&&'
   },
+  jd_global_mh:{//京东国际盲盒  0 9,12,20,21 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_global_mh.js',
+    cron:{m:'13',h:'09,12,20,21'},
+    run:runconfig['jd_global_mh']?runconfig['jd_global_mh']['run']:'true',
+    shellcode:'node jd_global_mh.js&&'
+  },
+  jd_beauty:{//美丽研究院  1 7,12,19 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
+    cron:{m:'43',h:'06,11,18'},
+    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
+    shellcode:'node jd_beauty.js&&'
+  },
   jx_cfd:{//京喜财富岛  0 * * * *
     url:'https://github.com/allindusk/jd_xmly/raw/main/jx_cfd.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
@@ -123,13 +135,13 @@ let scriptobj_noasync = {
   jd_joy_feedPets:{//京东宠汪汪喂食  15 0-23/1 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_joy_feedPets.js',
     cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_joy_feedPets']?runconfig['jd_joy_feedPets']['run']:'true',
+    run:runconfig['jd_joy_feedPets']?runconfig['jd_joy_feedPets']['run']:'false',
     shellcode:'node jd_joy_feedPets.js&&'
   },
   jd_joy_steal:{//宠汪汪偷好友积分与狗粮  10 0-21/3 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_joy_steal.js',
     cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
-    run:runconfig['jd_joy_steal']?runconfig['jd_joy_steal']['run']:'true',
+    run:runconfig['jd_joy_steal']?runconfig['jd_joy_steal']['run']:'false',
     shellcode:'node jd_joy_steal.js&&'
   },
   jd_jxnc:{//京喜农场  0 9,12,18 * * *
@@ -341,10 +353,16 @@ function getnoasyncstr(){
   }
   return scriptstr.substr(0,scriptstr.length-2)
 }
+console.log(geturlarr())
 function geturlarr(){
   let urlarr = []
   for (const key in scriptobj) {
-    urlarr.push(scriptobj[key]['url']);
+    let url = scriptobj[key]['url']
+    if (url) {
+      if (!url.includes("codebackup_ym/raw/master")) {
+        urlarr.push(scriptobj[key]['url']);
+      }
+    }
   }
   return urlarr
 }
