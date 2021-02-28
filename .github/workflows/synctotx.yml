@@ -22,8 +22,7 @@ jobs:
         run: |
           node dlcode.js
           git clone -b master https://github.com/allindusk/codebackup_ym.git
-          cp -rf codebackup_ym/*.js script/
-          cp -rf codebackup_ym/utils script
+          cp -rf codebackup_ym/*.js codebackup_ym/utils/ script/
           rm -rf codebackup_ym/ 
           du -h --max-depth=1
           cd script/

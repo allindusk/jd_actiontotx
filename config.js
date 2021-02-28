@@ -17,12 +17,6 @@ let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 
 let scriptobj_noasync = {
 //======限时=================
-  jd_xgyl:{//小鸽有礼2  30 7 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_xgyl.js',
-    cron:{m:'43',h:'19'},
-    run:runconfig['jd_xgyl']?runconfig['jd_xgyl']['run']:'true',
-    shellcode:'node jd_xgyl.js&&'
-  },
 //======常驻=================
   jd_sgmh:{//闪购盲盒  20 8 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_sgmh.js',
@@ -43,7 +37,7 @@ let scriptobj_noasync = {
     shellcode:'node jd_beauty.js&&'
   },
   jx_cfd:{//京喜财富岛  0 * * * *
-    url:'https://github.com/allindusk/jd_xmly/raw/main/jx_cfd.js',
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_cfd.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
     run:runconfig['jx_cfd']?runconfig['jx_cfd']['run']:'true',
     shellcode:'node jx_cfd.js&&'

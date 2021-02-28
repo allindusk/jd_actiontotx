@@ -42,7 +42,7 @@ inputs:
         parameters:
           name: joy_reward2
           cronExpression: "0 0 0,8,12,16 * * * *"
-          enable: true
+          enable: false
           argument: async_jd?joy_reward.js
     - timer:
         parameters:
