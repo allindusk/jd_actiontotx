@@ -1,5 +1,5 @@
 /**
-- 仓库列表
+  - 仓库列表
   - https://github.com/LXK9301/jd_scripts/raw/master
   - https://github.com/shylocks/Loon/raw/main
   - https://gitee.com/lxk0301/jd_scripts/raw/master

@@ -20,10 +20,10 @@ jobs:
           sudo npm install serverless -g
       - name: "下载代码"
         run: |
-          node dlcode.js
           git clone -b master https://github.com/allindusk/codebackup_ym.git
           cp -rf codebackup_ym/*.js codebackup_ym/utils/ script/
           rm -rf codebackup_ym/ 
+          node dlcode.js
           du -h --max-depth=1
           cd script/
           du -h --max-depth=1
