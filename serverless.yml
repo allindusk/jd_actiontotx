@@ -58,6 +58,12 @@ inputs:
           argument: async_jd?jd_nzmh.js
     - timer:
         parameters:
+          name: jd_live
+          cronExpression: "0 10,15,20 12 * * * *"
+          enable: true
+          argument: async_jd?jd_live.js
+    - timer:
+        parameters:
           name: noasyncone
           cronExpression: "0 13,43 * * * * *"
           enable: true
