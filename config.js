@@ -24,16 +24,10 @@ let scriptobj_noasync = {
     run:runconfig['jd_sgmh']?runconfig['jd_sgmh']['run']:'true',
     shellcode:'node jd_sgmh.js&&'
   },
-  jd_global_mh:{//京东国际盲盒  0 9,12,20,21 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_global_mh.js',
-    cron:{m:'13',h:'09,12,20,21'},
-    run:runconfig['jd_global_mh']?runconfig['jd_global_mh']['run']:'true',
-    shellcode:'node jd_global_mh.js&&'
-  },
   jd_beauty:{//美丽研究院  1 7,12,19 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
     cron:{m:'43',h:'06,11,18'},
-    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
+    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'false',
     shellcode:'node jd_beauty.js&&'
   },
   jd_cfd:{//京喜财富岛  0 * * * *
@@ -41,12 +35,6 @@ let scriptobj_noasync = {
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
     run:runconfig['jd_cfd']?runconfig['jd_cfd']['run']:'true',
     shellcode:'node jd_cfd.js&&'
-  },
-  jd_mh:{//盲盒抽京豆  1 7 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_mh.js',
-    cron:{m:'13',h:'19'},
-    run:runconfig['jd_mh']?runconfig['jd_mh']['run']:'true',
-    shellcode:'node jd_mh.js&&'
   },
   jd_ms:{//京东秒秒币  10 7 * * * 
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_ms.js',

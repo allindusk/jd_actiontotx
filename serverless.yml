@@ -13,7 +13,7 @@ inputs:
   timeout: 900
   environment:
     variables:
-      RUN_CONFIG: '{"jd_jdfactory":{"run":"false"},"jd_unsubscribe":{"run":"false"}}'
+      RUN_CONFIG: '{"jd_jdfactory":{"run":"true"},"jd_unsubscribe":{"run":"false"}}'
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
@@ -47,15 +47,9 @@ inputs:
     - timer:
         parameters:
           name: jd_joyone
-          cronExpression: "0 1 * * * * *"
+          cronExpression: "0 15 * * * * *"
           enable: true
           argument: async_jd?jd_joy_feedPets.js&&jd_joy_steal.js
-    - timer:
-        parameters:
-          name: jd_nzmhone
-          cronExpression: "0 0 8 1-8/1,27,28 2,3 * *"
-          enable: true
-          argument: async_jd?jd_nzmh.js
     - timer:
         parameters:
           name: jd_live
