@@ -27,7 +27,7 @@ let scriptobj_noasync = {
   jd_beauty:{//美丽研究院  1 7,12,19 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
     cron:{m:'43',h:'06,11,18'},
-    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'false',
+    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
     shellcode:'node jd_beauty.js&&'
   },
   jd_cfd:{//京喜财富岛  0 * * * *
