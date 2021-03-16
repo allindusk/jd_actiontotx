@@ -204,12 +204,6 @@ let scriptobj_noasync = {
     run:runconfig['jd_syj']?runconfig['jd_syj']['run']:'true',
     shellcode:'node jd_syj.js&&'
   },
-  jd_unsubscribe:{//取关京东店铺和商品  55 23 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_unsubscribe.js',
-    cron:{m:'43',h:'03,05'},
-    run:runconfig['jd_unsubscribe']?runconfig['jd_unsubscribe']['run']:'true',
-    shellcode:'node jd_unsubscribe.js&&'
-  },
   jx_sign:{//京喜签到  5 0 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_sign.js',
     cron:{m:'13',h:'00,01'},
