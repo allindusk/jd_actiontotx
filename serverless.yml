@@ -22,28 +22,16 @@ inputs:
   events:
     - timer:
         parameters:
-          name: car_exchange_blueCoin_cash
-          cronExpression: "59 59 23 * * * *"
-          enable: true
-          argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
-    - timer:
-        parameters:
-          name: car_exchange_blueCoin_cash2
-          cronExpression: "59 1 0 * * * *"
-          enable: true
-          argument: async_jd?jd_blueCoin.js&&jd_car_exchange.js
-    - timer:
-        parameters:
           name: joy_rewardone
           cronExpression: "59 59 7,11,15,23 * * * *"
           enable: true
-          argument: async_jd?joy_reward.js
+          argument: async_jd?jd_joy_reward.js
     - timer:
         parameters:
           name: joy_rewardtwo
           cronExpression: "0 0 0,8,12,16 * * * *"
           enable: true
-          argument: async_jd?joy_reward.js
+          argument: async_jd?jd_joy_reward.js
     - timer:
         parameters:
           name: jd_joyone
