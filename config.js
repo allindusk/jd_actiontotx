@@ -24,12 +24,6 @@ let scriptobj_noasync = {
     run:runconfig['jd_sgmh']?runconfig['jd_sgmh']['run']:'true',
     shellcode:'node jd_sgmh.js&&'
   },
-  jd_beauty:{//美丽研究院  1 7,12,19 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
-    cron:{m:'43',h:'06,11,18'},
-    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
-    shellcode:'node jd_beauty.js&&'
-  },
   jd_cfd:{//京喜财富岛  0 * * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_cfd.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
