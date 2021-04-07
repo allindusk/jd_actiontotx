@@ -39,25 +39,29 @@ jobs:
       #     ls -a
       - name: "将Secrets里面配置的变量添加到severless.yml里面作为环境变量"
         run: |
-          if [ $SCF_REGION ]; then sed -i "s/region:.*$/region: $SCF_REGION/g" serverless.yml; fi;
-          if [ $JD_COOKIE ]; then sed -i "/variables/a\      JD_COOKIE: $JD_COOKIE" serverless.yml; fi;
-          if [ $JD_DEBUG ]; then sed -i "/variables/a\      JD_DEBUG: $JD_DEBUG" serverless.yml; fi;
-          if [ $JD_USER_AGENT ]; then sed -i "/variables/a\      JD_USER_AGENT: $JD_USER_AGENT" serverless.yml; fi;
-          if [ $PUSH_KEY ]; then sed -i "/variables/a\      PUSH_KEY: $PUSH_KEY" serverless.yml; fi;
-          if [ $BARK_PUSH ]; then sed -i "/variables/a\      BARK_PUSH: $BARK_PUSH" serverless.yml; fi;
-          if [ $BARK_SOUND ]; then sed -i "/variables/a\      BARK_SOUND: $BARK_SOUND" serverless.yml; fi;
-          if [ $TG_BOT_TOKEN ]; then sed -i "/variables/a\      TG_BOT_TOKEN: $TG_BOT_TOKEN" serverless.yml; fi;
-          if [ $TG_USER_ID ]; then sed -i "/variables/a\      TG_USER_ID: $TG_USER_ID" serverless.yml; fi;
-          if [ $DD_BOT_TOKEN ]; then sed -i "/variables/a\      DD_BOT_TOKEN: $DD_BOT_TOKEN" serverless.yml; fi;
-          if [ $DD_BOT_SECRET ]; then sed -i "/variables/a\      DD_BOT_SECRET: $DD_BOT_SECRET" serverless.yml; fi;
-          if [ $QYWX_KEY ]; then sed -i "/variables/a\      QYWX_KEY: $QYWX_KEY" serverless.yml; fi;
-          if [ $IGOT_PUSH_KEY ]; then sed -i "/variables/a\      IGOT_PUSH_KEY: $IGOT_PUSH_KEY" serverless.yml; fi;
-          if [ $QQ_SKEY ]; then sed -i "/variables/a\      QQ_SKEY: $QQ_SKEY" serverless.yml; fi;
-          if [ $QQ_MODE ]; then sed -i "/variables/a\      QQ_MODE: $QQ_MODE" serverless.yml; fi;
-          if [ $PUSH_PLUS_TOKEN ]; then sed -i "/variables/a\      PUSH_PLUS_TOKEN: $PUSH_PLUS_TOKEN" serverless.yml; fi;
-          if [ $PUSH_PLUS_USER ]; then sed -i "/variables/a\      PUSH_PLUS_USER: $PUSH_PLUS_USER" serverless.yml; fi;
-          if [ $TG_PROXY_HOST ]; then sed -i "/variables/a\      TG_PROXY_HOST: $TG_PROXY_HOST" serverless.yml; fi;
-          if [ $TG_PROXY_PORT ]; then sed -i "/variables/a\      TG_PROXY_PORT: $TG_PROXY_PORT" serverless.yml; fi;
+          ckarray=(${JD_COOKIE//&/ })
+          for (( i=0;i<${#ckarray[@]};i++))
+          do
+            if [ $SCF_REGION ]; then sed -i "s/region:.*$/region: $SCF_REGION/g" serverless$i.yml; fi;
+            if [ ${ckarray[i]} ]; then sed -i "/variables/a\      JD_COOKIE: ${ckarray[i]}" serverless$i.yml; fi;
+            if [ $JD_DEBUG ]; then sed -i "/variables/a\      JD_DEBUG: $JD_DEBUG" serverless$i.yml; fi;
+            if [ $JD_USER_AGENT ]; then sed -i "/variables/a\      JD_USER_AGENT: $JD_USER_AGENT" serverless$i.yml; fi;
+            if [ $PUSH_KEY ]; then sed -i "/variables/a\      PUSH_KEY: $PUSH_KEY" serverless$i.yml; fi;
+            if [ $BARK_PUSH ]; then sed -i "/variables/a\      BARK_PUSH: $BARK_PUSH" serverless$i.yml; fi;
+            if [ $BARK_SOUND ]; then sed -i "/variables/a\      BARK_SOUND: $BARK_SOUND" serverless$i.yml; fi;
+            if [ $TG_BOT_TOKEN ]; then sed -i "/variables/a\      TG_BOT_TOKEN: $TG_BOT_TOKEN" serverless$i.yml; fi;
+            if [ $TG_USER_ID ]; then sed -i "/variables/a\      TG_USER_ID: $TG_USER_ID" serverless$i.yml; fi;
+            if [ $DD_BOT_TOKEN ]; then sed -i "/variables/a\      DD_BOT_TOKEN: $DD_BOT_TOKEN" serverless$i.yml; fi;
+            if [ $DD_BOT_SECRET ]; then sed -i "/variables/a\      DD_BOT_SECRET: $DD_BOT_SECRET" serverless$i.yml; fi;
+            if [ $QYWX_KEY ]; then sed -i "/variables/a\      QYWX_KEY: $QYWX_KEY" serverless$i.yml; fi;
+            if [ $IGOT_PUSH_KEY ]; then sed -i "/variables/a\      IGOT_PUSH_KEY: $IGOT_PUSH_KEY" serverless$i.yml; fi;
+            if [ $QQ_SKEY ]; then sed -i "/variables/a\      QQ_SKEY: $QQ_SKEY" serverless$i.yml; fi;
+            if [ $QQ_MODE ]; then sed -i "/variables/a\      QQ_MODE: $QQ_MODE" serverless$i.yml; fi;
+            if [ $PUSH_PLUS_TOKEN ]; then sed -i "/variables/a\      PUSH_PLUS_TOKEN: $PUSH_PLUS_TOKEN" serverless$i.yml; fi;
+            if [ $PUSH_PLUS_USER ]; then sed -i "/variables/a\      PUSH_PLUS_USER: $PUSH_PLUS_USER" serverless$i.yml; fi;
+            if [ $TG_PROXY_HOST ]; then sed -i "/variables/a\      TG_PROXY_HOST: $TG_PROXY_HOST" serverless$i.yml; fi;
+            if [ $TG_PROXY_PORT ]; then sed -i "/variables/a\      TG_PROXY_PORT: $TG_PROXY_PORT" serverless$i.yml; fi;
+          done
         env: #因为直接读取secrets里面的值很多字符不会自动转译，导致写入serverless.yml异常，所以设置到环境变量，在读取环境变量转译过的值
           SCF_REGION: ${{ secrets.SCF_REGION }}
           JD_COOKIE: ${{ secrets.JD_COOKIE}}
@@ -79,8 +83,15 @@ jobs:
           TG_PROXY_HOST: ${{ secrets.TG_PROXY_HOST}}
           TG_PROXY_PORT: ${{ secrets.TG_PROXY_PORT}}
       - name: "部署到腾讯云函数"
-        run: serverless deploy
+        run: |
+          ckarray=(${JD_COOKIE//&/ }) 
+          for (( i=0;i<${#ckarray[@]};i++)) 
+          do
+            cp -f serverless$i.yml serverless.yml
+            serverless deploy
+          done
         env:
+          JD_COOKIE: ${{ secrets.JD_COOKIE}}
           STAGE: dev
           SERVERLESS_PLATFORM_VENDOR: tencent
           TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}

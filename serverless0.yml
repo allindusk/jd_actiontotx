@@ -1,0 +1,54 @@
+component: scf
+name: yangmaojb0
+app: yangmaojb0
+inputs:
+  name: yangmaojb0
+  src: ./
+  description: yangmaojb0
+  handler: index.main_handler
+  runtime: Nodejs12.16
+  namespace: default
+  region: ap-hongkong 
+  memorySize: 128
+  timeout: 900
+  environment:
+    variables:
+      RUN_CONFIG: '{"jd_jdfactory":{"run":"true"},"jd_jxnc":{"run":"false"},"jd_dreamFactory":{"run":"true"}}'
+      FRUIT_NOTIFY_CONTROL: 'true'
+      JD_JOY_REWARD_NOTIFY: 'true'
+      PET_NOTIFY_CONTROL: 'true'
+      JD_JOY_REWARD_NAME: '500'
+      MARKET_COIN_TO_BEANS: '0'
+      JXNCTOKENS: '{"farm_jstoken":"9a26c3d5fdd1668d91900f473141c32c","timestamp":"1610441576034","phoneid":"bdc03a4fc9be38b2-35355204688244"}'
+      JD_WECHAT_USER_AGENT: 'Mozilla/5.0 (Linux; Android 10; COL-AL10 Build/HUAWEICOL-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045230 Mobile Safari/537.36'
+  events:
+    - timer:
+        parameters:
+          name: joy_rewardone
+          cronExpression: "59 59 7,11,15,23 * * * *"
+          enable: false
+          argument: async_jd?jd_joy_reward.js
+    - timer:
+        parameters:
+          name: joy_rewardtwo
+          cronExpression: "0 0 0,8,12,16 * * * *"
+          enable: false
+          argument: async_jd?jd_joy_reward.js
+    - timer:
+        parameters:
+          name: jd_joyone
+          cronExpression: "0 15 * * * * *"
+          enable: true
+          argument: async_jd?jd_joy_feedPets.js
+    - timer:
+        parameters:
+          name: jd_live
+          cronExpression: "0 10,15,20 12 * * * *"
+          enable: true
+          argument: async_jd?jd_live.js
+    - timer:
+        parameters:
+          name: noasyncone
+          cronExpression: "0 13,43 * * * * *"
+          enable: true
+          argument: noasync_jd
