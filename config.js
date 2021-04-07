@@ -164,7 +164,7 @@ let scriptobj_noasync = {
   },
   jd_redPacket:{//京东全民开红包  1 1 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_redPacket.js',
-    cron:{m:'43',h:'01'},
+    cron:{m:'43',h:'01,10'},
     run:runconfig['jd_redPacket']?runconfig['jd_redPacket']['run']:'true',
     shellcode:'node jd_redPacket.js&&'
   },
