@@ -140,7 +140,7 @@ let scriptobj_noasync = {
   },
   jd_necklace:{//点点券  10 0,20 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_necklace.js',
-    cron:{m:'43',h:'01,19'},
+    cron:{m:'43',h:'01,13,19'},
     run:runconfig['jd_necklace']?runconfig['jd_necklace']['run']:'true',
     shellcode:'node jd_necklace.js&&'
   },
