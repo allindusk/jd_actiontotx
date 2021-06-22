@@ -13,7 +13,7 @@ inputs:
   timeout: 900
   environment:
     variables:
-      RUN_CONFIG: '{"jd_jdfactory":{"run":"true"},"jd_jxnc":{"run":"false"},"jd_dreamFactory":{"run":"false"}}'
+      RUN_CONFIG: '{"jd_jdfactory":{"run":"false"},"jd_jxnc":{"run":"false"},"jd_dreamFactory":{"run":"false"}}'
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
@@ -21,7 +21,6 @@ inputs:
       JOY_FEED_COUNT: 40
       CASH_EXCHANGE: 'false'
       MARKET_COIN_TO_BEANS: '0'
-      JXNCTOKENS: '{"farm_jstoken":"9a26c3d5fdd1668d91900f473141c32c","timestamp":"1610441576034","phoneid":"bdc03a4fc9be38b2-35355204688244"}'
   events:
     - timer:
         parameters:

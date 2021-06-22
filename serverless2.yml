@@ -1,10 +1,10 @@
 component: scf
-name: yangmaojb0
-app: yangmaojb0
+name: yangmaojb2
+app: yangmaojb2
 inputs:
-  name: yangmaojb0
+  name: yangmaojb2
   src: ./
-  description: yangmaojb0
+  description: yangmaojb2
   handler: index.main_handler
   runtime: Nodejs12.16
   namespace: default
@@ -18,7 +18,7 @@ inputs:
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NAME: '500'
-      JOY_FEED_COUNT: 40
+      JOY_FEED_COUNT: 20
       CASH_EXCHANGE: 'false'
       MARKET_COIN_TO_BEANS: '0'
   events:

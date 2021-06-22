@@ -75,7 +75,7 @@ let scriptobj_noasync = {
   jd_crazy_joy:{//crazyJoy任务  10 7 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_crazy_joy.js',
     cron:{m:'13',h:'07'},
-    run:runconfig['jd_crazy_joy']?runconfig['jd_crazy_joy']['run']:'true',
+    run:runconfig['jd_crazy_joy']?runconfig['jd_crazy_joy']['run']:'false',
     shellcode:'node jd_crazy_joy.js&&'
   },
   jd_daily_egg:{//京东金融-天天提鹅  10 * * * *
@@ -93,7 +93,7 @@ let scriptobj_noasync = {
   jd_jdfactory:{//东东工厂  10 * * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jdfactory.js',
     cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22'},
-    run:runconfig['jd_jdfactory']?runconfig['jd_jdfactory']['run']:'true',
+    run:runconfig['jd_jdfactory']?runconfig['jd_jdfactory']['run']:'false',
     shellcode:'node jd_jdfactory.js&&'
   },
   jd_jdzz:{//京东赚赚  10 0 * * *
@@ -123,7 +123,7 @@ let scriptobj_noasync = {
   jd_jxnc:{//京喜农场  0 9,12,18 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jxnc.js',
     cron:{m:'43',h:'00,20'},
-    run:runconfig['jd_jxnc']?runconfig['jd_jxnc']['run']:'true',
+    run:runconfig['jd_jxnc']?runconfig['jd_jxnc']['run']:'false',
     shellcode:'node jd_jxnc.js&&'
   },
   jd_kd:{//京东快递签到  10 0 * * *
