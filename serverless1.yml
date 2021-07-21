@@ -13,7 +13,7 @@ inputs:
   timeout: 900
   environment:
     variables:
-      RUN_CONFIG: '{"jd_jdfactory":{"run":"false"},"jd_jxnc":{"run":"false"},"jd_dreamFactory":{"run":"false"}}'
+      RUN_CONFIG: '{"jd_pigPet":{"run":"false"},"jd_jxnc":{"run":"false"},"jd_dreamFactory":{"run":"false"}}'
       FRUIT_NOTIFY_CONTROL: 'true'
       JD_JOY_REWARD_NOTIFY: 'true'
       PET_NOTIFY_CONTROL: 'true'
