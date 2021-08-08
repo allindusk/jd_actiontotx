@@ -18,6 +18,54 @@ let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 let scriptobj_noasync = {
 //======限时=================
 //======常驻=================
+  jd_unsubscribe:{//取关京东店铺和商品  10 0 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_unsubscribe.js',
+    cron:{m:'43',h:'16,22'},
+    run:runconfig['jd_unsubscribe']?runconfig['jd_unsubscribe']['run']:'true',
+    shellcode:'node jd_unsubscribe.js&&'
+  },
+  jd_jin_tie:{//领金贴  10 0 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jin_tie.js',
+    cron:{m:'43',h:'01,22'},
+    run:runconfig['jd_jin_tie']?runconfig['jd_jin_tie']['run']:'true',
+    shellcode:'node jd_jin_tie.js&&'
+  },
+  jd_speed_redpocke:{//京东极速版红包  20 0,22 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_speed_redpocke.js',
+    cron:{m:'43',h:'01,22'},
+    run:runconfig['jd_speed_redpocke']?runconfig['jd_speed_redpocke']['run']:'true',
+    shellcode:'node jd_speed_redpocke.js&&'
+  },
+  jd_beauty:{//美丽研究院  1 7,12,19 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
+    cron:{m:'43',h:'01,07,12,19'},
+    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
+    shellcode:'node jd_beauty.js&&'
+  },
+  jd_health:{//东东健康社区  13 1,6,22 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_health.js',
+    cron:{m:'13',h:'01,06,22'},
+    run:runconfig['jd_health']?runconfig['jd_health']['run']:'true',
+    shellcode:'node jd_health.js&&'
+  },
+  jd_jxmc:{//惊喜牧场  20 0-23/3 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jxmc.js',
+    cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
+    run:runconfig['jd_jxmc']?runconfig['jd_jxmc']['run']:'true',
+    shellcode:'node jd_jxmc.js&&'
+  },
+  jd_dreamFactory_copy:{//京喜工厂  10 * * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_dreamFactory_copy.js',
+    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_dreamFactory_copy']?runconfig['jd_dreamFactory_copy']['run']:'true',
+    shellcode:'node jd_dreamFactory_copy.js&&'
+  },
+  jd_big_winner:{//省钱大赢家之翻翻乐  20 * * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_big_winner.js',
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_big_winner']?runconfig['jd_big_winner']['run']:'true',
+    shellcode:'node jd_big_winner.js&&'
+  },
   jd_sgmh:{//闪购盲盒  20 8 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_sgmh.js',
     cron:{m:'43',h:'16'},
