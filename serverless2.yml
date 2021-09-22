@@ -36,12 +36,6 @@ inputs:
           argument: async_jd?jd_joy_reward.js
     - timer:
         parameters:
-          name: jd_joyone
-          cronExpression: "0 15 * * * * *"
-          enable: true
-          argument: async_jd?jd_joy_feedPets.js
-    - timer:
-        parameters:
           name: jd_live
           cronExpression: "0 10,15,20 12 * * * *"
           enable: true

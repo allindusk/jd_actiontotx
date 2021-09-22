@@ -261,7 +261,7 @@ jx_cfd2:{//京喜财富岛  30 * * * *
   jd_joy:{//jd宠汪汪  15 0-23/2 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_joy.js',
     cron:{m:'13',h:'00,02,04,06,08,10,12,14,16,18,20,22'},
-    run:runconfig['jd_joy']?runconfig['jd_joy']['run']:'true',
+    run:runconfig['jd_joy']?runconfig['jd_joy']['run']:'false',
     shellcode:'node jd_joy.js&&'
   },
   jd_joy_feedPets:{//京东宠汪汪喂食  15 0-23/1 * * *
