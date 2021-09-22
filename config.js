@@ -17,7 +17,109 @@ let runconfig = process.env.RUN_CONFIG?JSON.parse(process.env.RUN_CONFIG):""
 
 let scriptobj_noasync = {
 //======限时=================
+jd_wsdlb:{//我是大老板农场  5 0-23/6 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_wsdlb.js',
+  cron:{m:'43',h:'0,06,12,18,22'},
+  run:runconfig['jd_wsdlb']?runconfig['jd_wsdlb']['run']:'true',
+  shellcode:'node jd_wsdlb.js&&'
+},
+jd_goodMorning:{//早起福利  30 7 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_goodMorning.js',
+  cron:{m:'43',h:'07'},
+  run:runconfig['jd_goodMorning']?runconfig['jd_goodMorning']['run']:'true',
+  shellcode:'node jd_goodMorning.js&&'
+},
+jd_joypark_joy:{//汪汪乐园养joy  20 0-23/3 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_joypark_joy.js',
+  cron:{m:'43',h:'0,03,06,09,12,15,18,21'},
+  run:runconfig['jd_joypark_joy']?runconfig['jd_joypark_joy']['run']:'true',
+  shellcode:'node jd_joypark_joy.js&&'
+},
+jd_joypark_task:{//汪汪乐园每日任务  20 7,9,17,20 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_joypark_task.js',
+  cron:{m:'43',h:'07,09,17,20'},
+  run:runconfig['jd_joypark_task']?runconfig['jd_joypark_task']['run']:'true',
+  shellcode:'node jd_joypark_task.js&&'
+},
+jd_ccSign:{//领券中心签到  15 7 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_ccSign.js',
+  cron:{m:'43',h:'07'},
+  run:runconfig['jd_ccSign']?runconfig['jd_ccSign']['run']:'true',
+  shellcode:'node jd_ccSign.js&&'
+},
+jx_cfd_mooncake:{//京喜财富岛合成月饼  10 * * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_cfd_mooncake.js',
+  cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+  run:runconfig['jx_cfd_mooncake']?runconfig['jx_cfd_mooncake']['run']:'true',
+  shellcode:'node jx_cfd_mooncake.js&&'
+},
+jx_cfd:{//京喜财富岛  18 0-23/2 * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_cfd.js',
+  cron:{m:'43',h:'00,02,04,06,08,10,12,14,16,18,20,22'},
+  run:runconfig['jx_cfd']?runconfig['jx_cfd']['run']:'true',
+  shellcode:'node jx_cfd.js&&'
+},
+jx_cfd2:{//京喜财富岛  30 * * * *
+  url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_cfd2.js',
+  cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+  run:runconfig['jx_cfd2']?runconfig['jx_cfd2']['run']:'true',
+  shellcode:'node jx_cfd2.js&&'
+},
 //======常驻=================
+  jd_jddj_bean:{//京东到家鲜豆  10 0 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_bean.js',
+    cron:{m:'13',h:'02'},
+    run:runconfig['jd_jddj_bean']?runconfig['jd_jddj_bean']['run']:'true',
+    shellcode:'node jd_jddj_bean.js&&'
+  },
+  jd_jddj_fruit:{//京东到家果园  10 0,3,8,11,17 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_fruit.js',
+    cron:{m:'43',h:'02,03,08,11,17'},
+    run:runconfig['jd_jddj_fruit']?runconfig['jd_jddj_fruit']['run']:'true',
+    shellcode:'node jd_jddj_fruit.js&&'
+  },
+  jd_jddj_fruit_collectWater:{//京东到家果园水车  45 */1 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_fruit_collectWater.js',
+    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_jddj_fruit_collectWater']?runconfig['jd_jddj_fruit_collectWater']['run']:'true',
+    shellcode:'node jd_jddj_fruit_collectWater.js&&'
+  },
+  jd_jddj_getPoints:{//京东到家鲜豆庄园收水滴  25 */1 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_getPoints.js',
+    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_jddj_getPoints']?runconfig['jd_jddj_getPoints']['run']:'true',
+    shellcode:'node jd_jddj_getPoints.js&&'
+  },
+  jd_jddj_plantBeans:{//京东到家鲜豆庄园  10 8 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_plantBeans.js',
+    cron:{m:'43',h:'08'},
+    run:runconfig['jd_jddj_plantBeans']?runconfig['jd_jddj_plantBeans']['run']:'true',
+    shellcode:'node jd_jddj_plantBeans.js&&'
+  },
+  jd_ddworld:{//东东世界  20 8 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_ddworld.js',
+    cron:{m:'43',h:'09'},
+    run:runconfig['jd_ddworld']?runconfig['jd_ddworld']['run']:'true',
+    shellcode:'node jd_ddworld.js&&'
+  },
+  jx_mc:{//京喜牧场  30 7 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jx_mc.js',
+    cron:{m:'13',h:'07'},
+    run:runconfig['jx_mc']?runconfig['jx_mc']['run']:'true',
+    shellcode:'node jx_mc.js&&'
+  },
+  jd_ddnc_farmpark:{//东东农场->东东乐园(点大风车  30 7 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_ddnc_farmpark.js',
+    cron:{m:'43',h:'07'},
+    run:runconfig['jd_ddnc_farmpark']?runconfig['jd_ddnc_farmpark']['run']:'true',
+    shellcode:'node jd_ddnc_farmpark.js&&'
+  },
+  jd_daily_lottery:{//小鸽有礼  13 1,22,23 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_daily_lottery.js',
+    cron:{m:'43',h:'01,22,23'},
+    run:runconfig['jd_daily_lottery']?runconfig['jd_daily_lottery']['run']:'true',
+    shellcode:'node jd_daily_lottery.js&&'
+  },
   jd_unsubscribe:{//取关京东店铺和商品  10 0 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_unsubscribe.js',
     cron:{m:'43',h:'16,22'},
@@ -48,6 +150,12 @@ let scriptobj_noasync = {
     run:runconfig['jd_health']?runconfig['jd_health']['run']:'true',
     shellcode:'node jd_health.js&&'
   },
+  jd_health_collect:{//东东健康社区收集能量  5-45/20 * * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_health.js',
+    cron:{m:'13,43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    run:runconfig['jd_health_collect']?runconfig['jd_health_collect']['run']:'true',
+    shellcode:'node jd_health_collect.js&&'
+  },
   jd_jxmc:{//惊喜牧场  20 0-23/3 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jxmc.js',
     cron:{m:'13',h:'00,03,06,09,12,15,18,21'},
@@ -74,7 +182,7 @@ let scriptobj_noasync = {
   },
   jd_cfd:{//京喜财富岛  0 * * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_cfd.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
+    cron:{m:'43',h:'00,08,13,19'},
     run:runconfig['jd_cfd']?runconfig['jd_cfd']['run']:'true',
     shellcode:'node jd_cfd.js&&'
   },
@@ -90,11 +198,11 @@ let scriptobj_noasync = {
     run:runconfig['jd_bean_change']?runconfig['jd_bean_change']['run']:'true',
     shellcode:'node jd_bean_change.js&&'
   },
-  jd_bean_home:{//领京豆额外奖励  10 7 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_bean_home.js',
+  jd_bean_homecopy:{//领京豆额外奖励  10 7 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_bean_homecopy.js',
     cron:{m:'13',h:'07'},
-    run:runconfig['jd_bean_home']?runconfig['jd_bean_home']['run']:'true',
-    shellcode:'node jd_bean_home.js&&'
+    run:runconfig['jd_bean_homecopy']?runconfig['jd_bean_homecopy']['run']:'true',
+    shellcode:'node jd_bean_homecopy.js&&'
   },
   jd_bookshop:{//口袋书店  1 8,12,18 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_bookshop.js',
