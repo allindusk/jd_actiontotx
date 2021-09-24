@@ -72,24 +72,6 @@ jx_cfd2:{//京喜财富岛  30 * * * *
     run:runconfig['jd_jddj_bean']?runconfig['jd_jddj_bean']['run']:'true',
     shellcode:'node jd_jddj_bean.js&&'
   },
-  jd_jddj_fruit:{//京东到家果园  10 0,3,8,11,17 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_fruit.js',
-    cron:{m:'43',h:'02,03,08,11,17'},
-    run:runconfig['jd_jddj_fruit']?runconfig['jd_jddj_fruit']['run']:'true',
-    shellcode:'node jd_jddj_fruit.js&&'
-  },
-  jd_jddj_fruit_collectWater:{//京东到家果园水车  45 */1 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_fruit_collectWater.js',
-    cron:{m:'43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_jddj_fruit_collectWater']?runconfig['jd_jddj_fruit_collectWater']['run']:'true',
-    shellcode:'node jd_jddj_fruit_collectWater.js&&'
-  },
-  jd_jddj_getPoints:{//京东到家鲜豆庄园收水滴  25 */1 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_getPoints.js',
-    cron:{m:'13',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_jddj_getPoints']?runconfig['jd_jddj_getPoints']['run']:'true',
-    shellcode:'node jd_jddj_getPoints.js&&'
-  },
   jd_jddj_plantBeans:{//京东到家鲜豆庄园  10 8 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_plantBeans.js',
     cron:{m:'43',h:'08'},
@@ -141,20 +123,8 @@ jx_cfd2:{//京喜财富岛  30 * * * *
   jd_beauty:{//美丽研究院  1 7,12,19 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_beauty.js',
     cron:{m:'43',h:'01,07,12,19'},
-    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'true',
+    run:runconfig['jd_beauty']?runconfig['jd_beauty']['run']:'false',
     shellcode:'node jd_beauty.js&&'
-  },
-  jd_health:{//东东健康社区  13 1,6,22 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_health.js',
-    cron:{m:'13',h:'01,06,22'},
-    run:runconfig['jd_health']?runconfig['jd_health']['run']:'true',
-    shellcode:'node jd_health.js&&'
-  },
-  jd_health_collect:{//东东健康社区收集能量  5-45/20 * * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_health.js',
-    cron:{m:'13,43',h:'00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23'},
-    run:runconfig['jd_health_collect']?runconfig['jd_health_collect']['run']:'true',
-    shellcode:'node jd_health_collect.js&&'
   },
   jd_jxmc:{//惊喜牧场  20 0-23/3 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jxmc.js',
@@ -179,12 +149,6 @@ jx_cfd2:{//京喜财富岛  30 * * * *
     cron:{m:'43',h:'16'},
     run:runconfig['jd_sgmh']?runconfig['jd_sgmh']['run']:'true',
     shellcode:'node jd_sgmh.js&&'
-  },
-  jd_cfd:{//京喜财富岛  0 * * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_cfd.js',
-    cron:{m:'43',h:'00,08,13,19'},
-    run:runconfig['jd_cfd']?runconfig['jd_cfd']['run']:'true',
-    shellcode:'node jd_cfd.js&&'
   },
   jd_ms:{//京东秒秒币  10 7 * * * 
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_ms.js',
@@ -360,11 +324,11 @@ jx_cfd2:{//京喜财富岛  30 * * * *
     run:runconfig['jx_sign']?runconfig['jx_sign']['run']:'true',
     shellcode:'node jx_sign.js&&'
   },
-  jd_bean_sign:{//京东每日签到 0 0 * * *
-    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_bean_sign.js',
+  jd_bean_signcopy:{//京东每日签到 0 0 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_bean_signcopy.js',
     cron:{m:'13',h:'00'},
-    run:runconfig['jd_bean_sign']?runconfig['jd_bean_sign']['run']:'true',
-    shellcode:'node jd_bean_sign.js&&'
+    run:runconfig['jd_bean_signcopy']?runconfig['jd_bean_signcopy']['run']:'false',
+    shellcode:'node jd_bean_signcopy.js&&'
   },
   jd_rankingList:{//京东排行榜  19 16 * * *
     url:'https://github.com/yangtingxiao/QuantumultX/raw/master/scripts/jd/jd_rankingList.js',
