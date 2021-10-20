@@ -17,7 +17,7 @@ jobs:
       - name: "安装依赖 serverless工具"
         run: |
           npm install
-          sudo npm install serverless -g
+          sudo npm install serverless@2.60.0 -g
       - name: "下载代码"
         run: |
           git clone -b master https://github.com/allindusk/codebackup_ym.git
