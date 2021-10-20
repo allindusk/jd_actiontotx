@@ -10,14 +10,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Use Node.js 10.x
+      - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
-          node-version: 10.x
+          node-version: 14.x
       - name: "安装依赖 serverless工具"
         run: |
           npm install
-          sudo npm install serverless@2.60.0 -g
+          sudo npm install serverless -g
       - name: "下载代码"
         run: |
           git clone -b master https://github.com/allindusk/codebackup_ym.git
