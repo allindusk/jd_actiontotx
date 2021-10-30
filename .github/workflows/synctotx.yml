@@ -22,7 +22,7 @@ jobs:
         run: |
           git clone -b master https://github.com/allindusk/codebackup_ym.git
           cp -rf codebackup_ym/activity/*.js script/
-          cp -rf codebackup_ym/*.js codebackup_ym/utils/ script/
+          cp -rf codebackup_ym/*.js codebackup_ym/utils/ codebackup_ym/function/ script/
           rm -rf codebackup_ym/ 
           node dlcode.js
           du -h --max-depth=1
