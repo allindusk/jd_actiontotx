@@ -19,7 +19,7 @@ let scriptobj_noasync = {
 //======限时=================
 jd_wsdlb:{//我是大老板农场  5 0-23/6 * * *
   url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_wsdlb.js',
-  cron:{m:'43',h:'0,06,12,18,22'},
+  cron:{m:'43',h:'06'},
   run:runconfig['jd_wsdlb']?runconfig['jd_wsdlb']['run']:'true',
   shellcode:'node jd_wsdlb.js&&'
 },
@@ -66,6 +66,12 @@ jx_cfd2:{//京喜财富岛  30 * * * *
   shellcode:'node jx_cfd2.js&&'
 },
 //======常驻=================
+  jd_DrawEntrance:{//天天优惠大乐透  15 6 * * *
+    url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_DrawEntrance.js',
+    cron:{m:'13',h:'06'},
+    run:runconfig['jd_DrawEntrance']?runconfig['jd_DrawEntrance']['run']:'true',
+    shellcode:'node jd_DrawEntrance.js&&'
+  },
   jd_jddj_bean:{//京东到家鲜豆  10 0 * * *
     url:'https://github.com/allindusk/codebackup_ym/raw/master/jd_jddj_bean.js',
     cron:{m:'13',h:'02'},
